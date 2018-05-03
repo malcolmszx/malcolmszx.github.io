@@ -1,7 +1,7 @@
 ---
 layout:  post
 title:  新闻公告管理员
-subtitle:  curd 
+subtitle: admin curd 
 date:   2018-05-03
 author:   BY Malcolmszx
 header-img: img/post-bg-ios9-web.jpg
