@@ -2,7 +2,7 @@
 layout:    post
 title:    新闻公告管理员
 subtitle:   
-date:       2017-05-03
+date:       2018-05-03
 author:     BY Malcolmszx
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
@@ -64,8 +64,7 @@ post
 7. **备注**<br>
      兼容添加多个新闻公告管理员,后端接收json数组
      
-     
-     ### 获取新闻公告管理员列表
+### 获取新闻公告管理员列表
 
 - **请求uri**<br>
 bulletinAdmin/list
