@@ -72,7 +72,7 @@ bulletinAdmin/list
 - **请求方式**<br>
 post
 - **请求头**<br>
-"key" : "Content-Type",  "value" : "x-www-form-urlencoded"
+"key" : "Content-Type",  "value" : "x-www-form-urlencoded"<br>
 - **请求参数**
     <table>
         <tr>
@@ -125,13 +125,13 @@ post
     
 ### 删除新闻公告管理员
 
-1. **请求uri**<br>
+- **请求uri** <br>
 bulletinAdmin/delete
-2. **请求方式**<br>
+- **请求方式** <br>
 post
-3. **请求头**<br>
-"key" : "Content-Type",  "value" : "x-www-form-urlencoded"
-4. **请求参数**
+- **请求头** <br>
+"key" : "Content-Type",  "value" : "x-www-form-urlencoded"<br>
+- **请求参数**
     <table>
         <tr>
             <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
@@ -149,13 +149,13 @@ post
             <td>ids</td> <td>List<String></td> <td>是</td> <td>管理员编号id</td> <td> -  </td> <td>5ae92a4f29bbf603904abcf5</td>
         </tr>
     </table>
- 5. **返回正确JSON示例**<br>
+ - **返回正确JSON示例**<br>
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
         &emsp;"data": null<br> 
     }<br>
-6. **返回错误JSON示例**<br>
+- **返回错误JSON示例**<br>
     {<br>
        &emsp; "code": 201,<br>
        &emsp; "msg": "请求失败"<br>
