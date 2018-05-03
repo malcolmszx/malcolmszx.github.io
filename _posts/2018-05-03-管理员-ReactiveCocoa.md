@@ -87,8 +87,7 @@ post
         <tr>
             <td>status</td> <td>String</td> <td>是</td> <td>0为删除 1为正常</td> <td> - </td> <td>1</td>
         </tr>
-    </table>
-    
+    </table>  
 - **返回正确JSON示例**<br>
     {<br>
      &emsp;"code": 200,<br>
@@ -126,7 +125,7 @@ post
     
 ### 删除新闻公告管理员
 
- - **请求uri**<br>
+- **请求uri**<br>
 bulletinAdmin/delete
 - **请求方式**<br>
 post
