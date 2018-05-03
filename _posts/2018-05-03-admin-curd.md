@@ -9,7 +9,6 @@ catalog: true
 tags:
     - interface
 ---
-
 ### 创建新闻公告管理员
 
 1. **请求uri**<br>
