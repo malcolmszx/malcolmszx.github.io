@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      管理员
-subtitle:   函数式编程框架 ReactiveCocoa 进阶
+subtitle:   CURD
 date:       2017-05-03
 author:     BY Malcolmszx
 header-img: img/post-bg-ios9-web.jpg
@@ -124,7 +124,7 @@ post
        &emsp; "msg": "请求失败"<br>
     }<br>
     
-### 删除新闻公告管理员列表
+### 删除新闻公告管理员
 
 - **请求uri**<br>
 bulletinAdmin/delete
@@ -150,12 +150,12 @@ post
             <td>ids</td> <td>List<String></td> <td>是</td> <td>管理员编号id</td> <td> -  </td> <td>5ae92a4f29bbf603904abcf5</td>
         </tr>
     </table>
-- **返回正确JSON示例**<br>
+ - **返回正确JSON示例**<br>
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
         &emsp;"data": null<br> 
-    }<br>
+    }<br>
 - **返回错误JSON示例**<br>
     {<br>
        &emsp; "code": 201,<br>
