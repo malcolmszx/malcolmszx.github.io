@@ -132,6 +132,7 @@ post
 - **请求头** <br>
 "key" : "Content-Type",  "value" : "x-www-form-urlencoded"<br>
 - **请求参数**
+
     <table>
         <tr>
             <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
@@ -146,7 +147,7 @@ post
             <td>status</td> <td>String</td> <td>是</td> <td>0为删除 1为正常</td> <td> - </td> <td>1</td>
         </tr>
         <tr>
-            <td>ids</td> <td>List<String></td> <td>是</td> <td>管理员编号id</td> <td> -  </td> <td>5ae92a4f29bbf603904abcf5</td>
+            <td>ids</td> <td>List</td> <td>是</td> <td>管理员编号id</td> <td> -  </td> <td>5ae92a4f29bbf603904abcf5</td>
         </tr>
     </table> 
  - **返回正确JSON示例**<br>
