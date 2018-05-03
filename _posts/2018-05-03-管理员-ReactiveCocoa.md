@@ -19,7 +19,7 @@ post
 3. **请求头**<br>
 "key" : "Content-Type",  "value" : "application/json"
 4. **请求参数**
-    <table>
+     <table>
         <tr>
             <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
         </tr>
@@ -170,23 +170,16 @@ post
 - **请求头**<br>
 "key" : "Content-Type",  "value" : "x-www-form-urlencoded"<br>
 - **请求参数**
-    <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-        <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>236</td>
-        </tr>
-        <tr>
-            <td>pubId</td> <td>String</td> <td>是</td> <td>公共号ID</td> <td> -  </td> <td>XT-717062e8-8ee5-4873-a607-e8ccf4e8068f</td>
-        </tr>
-        <tr>
-            <td>status</td> <td>String</td> <td>是</td> <td>0为删除 1为正常</td> <td> - </td> <td>1</td>
-        </tr>
-        <tr>
-            <td>name</td> <td>String</td> <td>是</td> <td>名称</td> <td> -  </td><td>黄</td>
-        </tr>
-    </table> 
+
+
+ | 参数名称 | 类型 | 必填 | 描述 | 默认值 | 参考值 |
+ | :--  | :--: | ----: | :--  | :--: | ----: |
+ | eid | String | 是 | 工作圈ID | - | 236 |
+ | pubId | String | 是 | 公共号ID | - | XT-717062e8-8ee5-4873-a607-e8ccf4e8068f |
+ | status | String | 是 | 0为删除 1为正常 | - | 1 |
+ | name | String | 是 | 名称 | - | 黄 |
+
+
 - **返回正确JSON示例**<br>    
 {<br>
      &emsp;"code": 200,<br>
