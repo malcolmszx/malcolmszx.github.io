@@ -50,7 +50,7 @@ post
          <tr>
             <td>creatorDate</td> <td>Date</td> <td>是</td> <td>创建日期</td> <td> -  </td><td>1525230414</td>
          </tr>
-    </table>
+    </table> 
 5. **返回正确JSON示例**<br>
     {<br>
         &emsp;"code": 200,<br>
@@ -87,7 +87,7 @@ post
         <tr>
             <td>status</td> <td>String</td> <td>是</td> <td>0为删除 1为正常</td> <td> - </td> <td>1</td>
         </tr>
-    </table>  
+    </table> 
 - **返回正确JSON示例**<br>
     {<br>
      &emsp;"code": 200,<br>
@@ -148,7 +148,7 @@ post
         <tr>
             <td>ids</td> <td>List<String></td> <td>是</td> <td>管理员编号id</td> <td> -  </td> <td>5ae92a4f29bbf603904abcf5</td>
         </tr>
-    </table>
+    </table> 
  - **返回正确JSON示例**<br>
     {<br>
         &emsp;"code": 200,<br>
