@@ -1,7 +1,7 @@
 ---
-layout:     post
-title:      管理员
-subtitle:   CURD
+layout:    post
+title:    新闻公告管理员
+subtitle:   
 date:       2017-05-03
 author:     BY Malcolmszx
 header-img: img/post-bg-ios9-web.jpg
