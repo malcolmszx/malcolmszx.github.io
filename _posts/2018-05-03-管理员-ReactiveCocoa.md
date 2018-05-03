@@ -1,16 +1,13 @@
 ---
 layout:     post
-title:      ReactiveCocoa
-subtitle:   函数式编程框架 ReactiveCocoa 进阶
+title:      管理员
+subtitle:   函数式编程框架 ReactiveCocoa 进阶
 date:       2017-05-03
-author:     BY
+author:     BY Malcolmszx
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
-    - iOS
-    - ReactiveCocoa
-    - 函数式编程
-    -
+    - interface
 ---
 
 ### 创建新闻公告管理员
