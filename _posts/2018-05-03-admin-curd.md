@@ -63,8 +63,9 @@ post
     }<br>
 7. **备注**<br>
      兼容添加多个新闻公告管理员,后端接收json数组
-     
-### 获取新闻公告管理员列表
+     
+     
+     ### 获取新闻公告管理员列表
 
 - **请求uri**<br>
 bulletinAdmin/list
@@ -204,4 +205,3 @@ post
             &emsp;&emsp;&emsp;}<br>
     &emsp;]<br>
 }<br>
-
