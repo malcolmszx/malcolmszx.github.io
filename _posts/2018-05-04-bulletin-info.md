@@ -194,3 +194,67 @@ post
         </tr>
     </table> 
 - **返回正确JSON示例**<br> 
+{<br> 
+    "code":200,<br> 
+    "msg":"请求成功",<br> 
+    "data":{<br> 
+        "content":[<br>
+            {<br>
+                "id":"5aebc35329bbf612bc09bc6b",<br>
+                "title":"百度资讯发送消息",<br>
+                "subTitle":null,<br>
+                "author":"5ad5c3ec29bbf624b4784628",<br>
+                "status":"1",<br>
+                "expireDate":1525399807,<br>
+                "url":null,<br>
+                "content":null,<br>
+                "pic":null,
+                "articleUrl":null,<br>
+                "articleId":null,<br>
+                "attachments":null,<br>
+                "type":{<br>
+                    "id":"9ad5c3ec29bbf624b4784628",<br>
+                    "name":"员工发展",<br>
+                    "insideShare":"1",<br>
+                    "outsideShare":"0",<br>
+                    "comment":null,<br>
+                    "status":"1",<br>
+                    "seq":null,<br>
+                    "delete":"1",<br>
+                    "creator":null,<br>
+                    "creatorDate":null,<br>
+                    "eid":"236"<br>
+                },<br>
+                "readnum":0,<br>
+                "praisenum":0,<br>
+                "creator":null,<br>
+                "publishDate":1525399857,<br>
+                "eid":"236",<br>
+                "delete":"1",<br>
+                "top":"0",<br>
+                "orderType":"2",<br>
+                "bulletinType":"员工发展",<br>
+                "updateToporNodate":1525399957,<br>
+                "bulletinMsgtype":"6"<br>
+            }<br>
+        ],<br>
+        "totalPages":1,<br> 
+        "totalElements":1,<br> 
+        "last":true,<br> 
+        "number":0,<br> 
+        "size":20,<br>
+        "sort":[<br>
+            {<br>
+                "direction":"DESC",<br>
+                "property":"publishDate",<br>
+                "ignoreCase":false,<br>
+                "nullHandling":"NATIVE",<br>
+                "ascending":false,<br>
+                "descending":true<br>
+            }<br>
+        ],<br> 
+        "numberOfElements":1,<br> 
+        "first":true<br>
+    }<br>
+}<br>
+
