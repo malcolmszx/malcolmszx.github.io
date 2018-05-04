@@ -135,3 +135,62 @@ post
     }<br>
 - **备注**<br>
     支持批量处理，后端接收Json数组
+### 删除新闻公告详情(兼容批量删除)
+
+- **请求uri**<br>
+bulletinInfo/delete
+- **请求方式**<br>
+post
+- **请求头**<br>
+"key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
+- **请求参数**
+     <table>
+        <tr>
+            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
+        </tr>
+        <tr>
+            <td>ids</td> <td>List</td> <td>是</td> <td>新闻公告ids</td> <td> -  </td> <td>-</td>
+        </tr>
+    </table> 
+- **返回正确JSON示例**<br> 
+    {<br>
+        &emsp;"code": 200,<br>
+        &emsp;"msg": "请求成功",<br>
+        &emsp;"data": null<br> 
+    }<br>
+- **返回错误JSON示例**<br>
+    {<br>
+       &emsp; "code": 201,<br>
+       &emsp; "msg": "请求失败"<br>
+    }<br>
+    
+### 条件查询新闻公告详情
+
+- **请求uri**<br>
+bulletinInfo/getListPageByCondition/{eid}
+- **请求方式**<br>
+post
+- **请求头**<br>
+"key" : "Content-Type",  "value" : "application/application/json"
+- **请求参数**
+     <table>
+        <tr>
+            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
+        </tr>
+        <tr>
+            <td>pageNumber</td> <td>int</td> <td>是</td> <td>页面</td> <td> -  </td> <td>-</td>
+        </tr>
+        <tr>
+            <td>pageSize</td> <td>int</td> <td>是</td> <td>页面大小</td> <td> -  </td> <td>-</td>
+        </tr>
+        <tr>
+            <td>title</td> <td>String</td> <td>否</td> <td>标题</td> <td> -  </td> <td>-</td>
+        </tr>
+        <tr>
+            <td>bulletinType</td> <td>String</td> <td>否</td> <td>公告类型</td> <td> -  </td> <td>员工发展</td>
+        </tr>
+        <tr>
+            <td>status</td> <td>String</td> <td>是</td> <td> 0为草稿 1为发布 </td> <td> - </td> <td>1</td>
+        </tr>
+    </table> 
+- **返回正确JSON示例**<br> 
