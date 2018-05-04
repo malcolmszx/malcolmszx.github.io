@@ -26,7 +26,7 @@ post
             <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>101</td>
         </tr>
         <tr>
-            <td>author</td> <td>String</td> <td>是</td> <td> 创建人的oId </td> <td> -  </td> <td>-</td>
+            <td>author</td> <td>String</td> <td>是</td> <td> 创建人的 oId </td> <td> -  </td> <td>-</td>
         </tr>
         <tr>
             <td>title</td> <td>String</td> <td> 是</td> <td>标题</td> <td> -  </td> <td>-</td>
@@ -41,16 +41,13 @@ post
             <td>orderType</td> <td>String</td> <td>是</td> <td>显示顺序</td> <td> -  </td> <td>-</td>
         </tr>
          <tr>
-            <td>oid</td> <td>String</td> <td>是</td> <td>用户oid</td> <td> -  </td> <td>-</td>
-        </tr>
-         <tr>
             <td>status</td> <td>String</td> <td>是</td> <td> 0为草稿 1为发布 </td> <td> - </td> <td>1</td>
         </tr>
         <tr>
             <td>top</td> <td>String</td> <td>是</td> <td> 0取消置顶 1置顶 </td> <td> -  </td> <td>0</td>
         </tr>
         <tr>
-            <td>publishDate</td> <td>String</td> <td>是</td> <td> 发布时间 </td> <td> -  </td> <td>1525399857</td>
+            <td>publishDate</td> <td>Date</td> <td>是</td> <td> 发布时间 </td> <td> -  </td> <td>1525399857</td>
          </tr>
          <tr>
             <td>updateToporNodate</td> <td>Date</td> <td>是</td> <td> 更新置顶状态时间 </td> <td> -  </td><td>1525399957</td>
