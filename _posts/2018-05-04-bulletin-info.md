@@ -26,13 +26,13 @@ post
             <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>101</td>
         </tr>
         <tr>
-            <td>author</td> <td>String</td> <td>是</td> <td>创建人的oId</td> <td> -  </td> <td>5ad5c3ec29bbf624b4784628</td>
+            <td>author</td> <td>String</td> <td>是</td> <td> 创建人的oId </td> <td> -  </td> <td>5ad5c3ec29bbf624b4784628</td>
         </tr>
         <tr>
             <td>title</td> <td>String</td> <td> 是</td> <td>标题</td> <td> -  </td> <td>-</td>
         </tr>
         <tr>
-            <td>bulletinMsgtype</td> <td>String</td> <td>是</td> <td>公告内容类型</td> <td> 单图文  </td> <td>6</td>
+            <td>bulletinMsgtype</td> <td>String</td> <td>是</td> <td> 公告内容类型 </td> <td> 单图文  </td> <td>6</td>
         </tr>
         <tr>
             <td>bulletinType</td> <td>String</td> <td>是</td> <td>公告类型</td> <td> -  </td> <td>员工发展</td>
@@ -44,22 +44,22 @@ post
             <td>oid</td> <td>String</td> <td>是</td> <td>用户oid</td> <td> -  </td> <td>-</td>
         </tr>
          <tr>
-            <td>status</td> <td>String</td> <td>是</td> <td>0为草稿 1为发布</td> <td> - </td> <td>1</td>
+            <td>status</td> <td>String</td> <td>是</td> <td> 0为草稿 1为发布 </td> <td> - </td> <td>1</td>
         </tr>
         <tr>
-            <td>top</td> <td>String</td> <td>是</td> <td>0为取消置顶 1为置顶</td> <td> -  </td> <td>0</td>
+            <td>top</td> <td>String</td> <td>是</td> <td> 0取消置顶 1置顶 </td> <td> -  </td> <td>0</td>
         </tr>
         <tr>
-            <td>publishDate</td> <td>String</td> <td>是</td> <td>发布时间</td> <td> -  </td> <td>1525399857</td>
+            <td>publishDate</td> <td>String</td> <td>是</td> <td> 发布时间 </td> <td> -  </td> <td>1525399857</td>
          </tr>
          <tr>
-            <td>updateToporNodate</td> <td>Date</td> <td>是</td> <td>更新置顶状态时间</td> <td> -  </td><td>1525399957</td>
+            <td>updateToporNodate</td> <td>Date</td> <td>是</td> <td> 更新置顶状态时间 </td> <td> -  </td><td>1525399957</td>
          </tr>
           <tr>
-            <td>expireDate</td> <td>Date</td> <td>是</td> <td>过去时间</td> <td> -  </td><td>1525399957</td>
+            <td>expireDate</td> <td>Date</td> <td>是</td> <td> 过去时间 </td> <td> -  </td><td>1525399957</td>
          </tr>
          <tr>
-            <td>type</td> <td>Json</td> <td>是</td> <td>公告类型Json对象</td> <td> -  </td><td>-</td>
+            <td>type</td> <td>Json</td> <td>是</td> <td> 公告类型Json对象 </td> <td> -  </td><td>-</td>
          </tr>
     </table> 
 5. **返回正确JSON示例**<br>
