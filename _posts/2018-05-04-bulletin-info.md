@@ -62,7 +62,7 @@ post
             <td>type</td> <td>Json</td> <td>是</td> <td> 公告类型Json对象 </td> <td> -  </td><td>-</td>
          </tr>
     </table> 
-5. **返回正确JSON示例**<br>
+5. **返回正确JSON示例**<br> 
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
