@@ -150,6 +150,9 @@ post
             <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
         </tr>
         <tr>
+            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>101</td>
+        </tr>
+        <tr>
             <td>pageNumber</td> <td>int</td> <td>是</td> <td>页面</td> <td> -  </td> <td>-</td>
         </tr>
         <tr>
@@ -165,6 +168,93 @@ post
             <td>status</td> <td>String</td> <td>是</td> <td> 0为草稿 1为发布 </td> <td> - </td> <td>1</td>
         </tr>
     </table> 
+- **返回正确JSON示例**<br> 
+{<br> 
+    &emsp;"code":200,<br> 
+    &emsp;"msg":"请求成功",<br> 
+    &emsp;"data":{<br> 
+        &emsp;&emsp;&emsp;"content":[<br>
+           &emsp;&emsp;&emsp;&emsp;{<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"id":"5aebc35329bbf612bc09bc6b",<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"title":"百度资讯发送消息",<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"subTitle":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"author":"5ad5c3ec29bbf624b4784628",<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"status":"1",<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"expireDate":1525399807,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"url":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"content":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"pic":null,
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"articleUrl":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"articleId":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"attachments":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp; "type":{<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"id":"9ad5c3ec29bbf624b4784628",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"name":"员工发展",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"insideShare":"1",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"outsideShare":"0",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"comment":null,<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"status":"1",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"seq":null,<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"delete":"1",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creator":null,<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creatorDate":null,<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"eid":"236"<br>
+                &emsp;&emsp;&emsp;&emsp;},<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"readnum":0,<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"praisenum":0,<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"creator":null,<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"publishDate":1525399857,<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"eid":"236",<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"delete":"1",<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"top":"0",<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"orderType":"2",<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"bulletinType":"员工发展",<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"updateToporNodate":1525399957,<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;"bulletinMsgtype":"6"<br>
+             &emsp;&emsp;&emsp;&emsp;}<br>
+         &emsp;&emsp;&emsp;],<br>
+        "totalPages":1,<br> 
+        "totalElements":1,<br> 
+        "last":true,<br> 
+        "number":0,<br> 
+        "size":20,<br>
+        "sort":[<br>
+         &emsp;&emsp;{<br>
+                &emsp;&emsp;&emsp;&emsp;"direction":"DESC",<br>
+                &emsp;&emsp;&emsp;&emsp;"property":"publishDate",<br>
+                &emsp;&emsp;&emsp;&emsp;"ignoreCase":false,<br>
+                &emsp;&emsp;&emsp;&emsp;"nullHandling":"NATIVE",<br>
+                &emsp;&emsp;&emsp;&emsp;"ascending":false,<br>
+                &emsp;&emsp;&emsp;&emsp;"descending":true<br>
+          &emsp;&emsp;}<br>
+         &emsp;],<br> 
+        "numberOfElements":1,<br> 
+        "first":true<br>
+     &emsp;}<br>
+}<br>
+
+### 获取所有新闻公告详情
+
+- **请求uri**<br>
+bulletinInfo/getListByPage/{eid}?pageNumber=0&pageSize=20
+- **请求方式**<br>
+get
+- **请求头**<br>
+- **请求参数**
+     <table>
+        <tr>
+            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
+        </tr>
+        <tr>
+            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>101</td>
+        </tr>
+        <tr>
+            <td>pageNumber</td> <td>int</td> <td>是</td> <td>页面</td> <td> -  </td> <td>-</td>
+        </tr>
+        <tr>
+            <td>pageSize</td> <td>int</td> <td>是</td> <td>页面大小</td> <td> -  </td> <td>-</td>
+        </tr>
+    </table>
 - **返回正确JSON示例**<br> 
 {<br> 
     &emsp;"code":200,<br> 
