@@ -156,7 +156,7 @@ post
             <td>pageNumber</td> <td>int</td> <td>是</td> <td>页面</td> <td> -  </td> <td>-</td>
         </tr>
         <tr>
-            <td>pageSize</td> <td>int</td> <td>是</td> <td>页面大小</td> <td> -  </td> <td>-</td>
+            <td>pageSize</td> <td>int</td> <td>是</td> <td>页面大小</td> <td> 20 </td> <td>20</td>
         </tr>
         <tr>
             <td>title</td> <td>String</td> <td>否</td> <td>标题</td> <td> -  </td> <td>-</td>
@@ -252,7 +252,7 @@ get
             <td>pageNumber</td> <td>int</td> <td>是</td> <td>页面</td> <td> -  </td> <td>-</td>
         </tr>
         <tr>
-            <td>pageSize</td> <td>int</td> <td>是</td> <td>页面大小</td> <td> -  </td> <td>-</td>
+            <td>pageSize</td> <td>int</td> <td>是</td> <td>页面大小</td> <td> 20 </td> <td>20</td>
         </tr>
     </table>
 - **返回正确JSON示例**<br> 
