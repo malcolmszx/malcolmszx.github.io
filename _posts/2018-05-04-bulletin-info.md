@@ -73,10 +73,10 @@ post
 7. **备注**<br>
      参数：type 为新闻公告类型的json, 创建新闻公告详情时异步请求获取其对象具体uri 参考新闻公告类型接口文档
      
-### 置顶或取消置顶(兼容批量)
+### 删除新闻公告详情(兼容批量删除)
 
 - **请求uri**<br>
-bulletinInfo/updateToporNo
+bulletinInfo/delete
 - **请求方式**<br>
 post
 - **请求头**<br>
@@ -102,10 +102,10 @@ post
        &emsp; "msg": "请求失败"<br>
     }<br>
     
-### 删除新闻公告详情(兼容批量删除)
+### 置顶或取消置顶(兼容批量)
 
 - **请求uri**<br>
-bulletinInfo/delete
+bulletinInfo/updateToporNo
 - **请求方式**<br>
 post
 - **请求头**<br>
