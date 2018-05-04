@@ -89,7 +89,6 @@ post
         <tr>
             <td>ids</td> <td>List</td> <td>是</td> <td>新闻公告ids</td> <td> -  </td> <td>-</td>
         </tr>
-        
     </table> 
 5. **返回正确JSON示例**<br> 
     {<br>
