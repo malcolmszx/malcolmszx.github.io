@@ -195,36 +195,36 @@ post
     </table> 
 - **返回正确JSON示例**<br> 
 {<br> 
-    "code":200,<br> 
-    "msg":"请求成功",<br> 
-    "data":{<br> 
-        "content":[<br>
-            {<br>
-                "id":"5aebc35329bbf612bc09bc6b",<br>
-                "title":"百度资讯发送消息",<br>
-                "subTitle":null,<br>
-                "author":"5ad5c3ec29bbf624b4784628",<br>
-                "status":"1",<br>
-                "expireDate":1525399807,<br>
-                "url":null,<br>
-                "content":null,<br>
-                "pic":null,
-                "articleUrl":null,<br>
-                "articleId":null,<br>
-                "attachments":null,<br>
-                "type":{<br>
-                    "id":"9ad5c3ec29bbf624b4784628",<br>
-                    "name":"员工发展",<br>
-                    "insideShare":"1",<br>
-                    "outsideShare":"0",<br>
-                    "comment":null,<br>
-                    "status":"1",<br>
-                    "seq":null,<br>
-                    "delete":"1",<br>
-                    "creator":null,<br>
-                    "creatorDate":null,<br>
-                    "eid":"236"<br>
-                },<br>
+    &emsp;"code":200,<br> 
+    &emsp;"msg":"请求成功",<br> 
+    &emsp;"data":{<br> 
+        &emsp;&emsp;&emsp;"content":[<br>
+           &emsp;&emsp;&emsp;&emsp;{<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"id":"5aebc35329bbf612bc09bc6b",<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"title":"百度资讯发送消息",<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"subTitle":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"author":"5ad5c3ec29bbf624b4784628",<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"status":"1",<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"expireDate":1525399807,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"url":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"content":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"pic":null,
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"articleUrl":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"articleId":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"attachments":null,<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp; "type":{<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"id":"9ad5c3ec29bbf624b4784628",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"name":"员工发展",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"insideShare":"1",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"outsideShare":"0",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"comment":null,<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"status":"1",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"seq":null,<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"delete":"1",<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creator":null,<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creatorDate":null,<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"eid":"236"<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;},<br>
                 "readnum":0,<br>
                 "praisenum":0,<br>
                 "creator":null,<br>
