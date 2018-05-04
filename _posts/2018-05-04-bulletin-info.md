@@ -26,7 +26,7 @@ post
             <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>101</td>
         </tr>
         <tr>
-            <td>author</td> <td>String</td> <td>是</td> <td> 创建人的oId </td> <td> -  </td> <td>5ad5c3ec29bbf624b4784628</td>
+            <td>author</td> <td>String</td> <td>是</td> <td> 创建人的oId </td> <td> -  </td> <td>-</td>
         </tr>
         <tr>
             <td>title</td> <td>String</td> <td> 是</td> <td>标题</td> <td> -  </td> <td>-</td>
