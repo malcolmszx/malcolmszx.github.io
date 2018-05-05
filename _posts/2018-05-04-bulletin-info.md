@@ -320,3 +320,69 @@ get
      &emsp;}<br>
 }<br>
 
+### 懒惰加载最新新闻公告详情
+
+- **请求uri**<br>
+bulletinInfo/app/getLatest
+- **请求方式**<br>
+post
+- **请求头**<br>
+"key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
+- **请求参数**
+     <table>
+        <tr>
+            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
+        </tr>
+        <tr>
+            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>236</td>
+        </tr>
+       <tr>
+            <td>publishDate</td> <td>Date</td> <td>是</td> <td>发布时间</td> <td> -  </td> <td>2018/5/4 10:10:57</td>
+       </tr>
+    </table>
+ - **返回正确JSON示例**<br>
+ {<br>
+     &emsp;"code": 200,<br>
+     &emsp;"msg": "请求成功",<br>
+     &emsp;"data": [<br>
+         &emsp;&emsp;&emsp;&emsp;{<br>
+            &emsp;&emsp;&emsp;&emsp;"id": "5aebc35329bbf612bc09bc6b",<br>
+            &emsp;&emsp;&emsp;&emsp; "title": "百度资讯发送消息",<br>
+            &emsp;&emsp;&emsp;&emsp; "subTitle": null,<br>
+            &emsp;&emsp;&emsp;&emsp; "author": "5ad5c3ec29bbf624b4784628",<br>
+            &emsp;&emsp;&emsp;&emsp; "status": "1",<br>
+            &emsp;&emsp;&emsp;&emsp;"expireDate": 1525399807,<br>
+            &emsp;&emsp;&emsp;&emsp; "url": null,<br>
+            &emsp;&emsp;&emsp;&emsp; "content": null,<br>
+            &emsp;&emsp;&emsp;&emsp; "pic": null,<br>
+            &emsp;&emsp;&emsp;&emsp;"articleUrl": null,<br>
+            &emsp;&emsp;&emsp;&emsp; "articleId": null,<br>
+            &emsp;&emsp;&emsp;&emsp;"attachments": null,<br>
+            &emsp;&emsp;&emsp;&emsp;"type": {<br>
+            &emsp;&emsp;&emsp;&emsp;"id": "9ad5c3ec29bbf624b4784628",<br>
+            &emsp;&emsp;&emsp;&emsp;"name": "员工发展",<br>
+            &emsp;&emsp;&emsp;&emsp;"insideShare": "1",<br>
+            &emsp;&emsp;&emsp;&emsp;"outsideShare": "0",<br>
+            &emsp;&emsp;&emsp;&emsp;"comment": null,<br>
+            &emsp;&emsp;&emsp;&emsp;"status": "1",<br>
+            &emsp;&emsp;&emsp;&emsp;"seq": null,<br>
+            &emsp;&emsp;&emsp;&emsp;"delete": "1",<br>
+            &emsp;&emsp;&emsp;&emsp;"creator": null,<br>
+            &emsp;&emsp;&emsp;&emsp;"creatorDate": null,<br>
+            &emsp;&emsp;&emsp;&emsp;"eid": "236"<br>
+            },<br>
+            "readnum": 0,<br>
+            "praisenum": 0,<br>
+            "creator": null,<br>
+            "publishDate": 1525399857,<br>
+            "eid": "236",<br>
+            "delete": "1",<br>
+            "top": "0",<br>
+            "orderType": "2",<br>
+            "bulletinType": "员工发展",<br>
+            "updateToporNodate": 1525399957,<br>
+            "bulletinMsgtype": "6"<br>
+        }<br>
+    ]<br>
+}<br>
+    
