@@ -275,7 +275,7 @@ get
                  &emsp;&emsp;&emsp;&emsp;&emsp;"articleId":null,<br>
                  &emsp;&emsp;&emsp;&emsp;&emsp;"attachments":null,<br>
                  &emsp;&emsp;&emsp;&emsp;&emsp;"type":<br>
-                 &emsp;&emsp;&emsp;&emsp;{<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<br>
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"id":"9ad5c3ec29bbf624b4784628",<br>
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"name":"员工发展",<br>
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"insideShare":"1",<br>
@@ -287,7 +287,7 @@ get
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creator":null,<br>
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creatorDate":null,<br>
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"eid":"236"<br>
-                &emsp;&emsp;&emsp;&emsp;},<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;},<br>
                 &emsp;&emsp;&emsp;&emsp;&emsp;"readnum":0,<br>
                 &emsp;&emsp;&emsp;&emsp;&emsp;"praisenum":0,<br>
                 &emsp;&emsp;&emsp;&emsp;&emsp;"creator":null,<br>
