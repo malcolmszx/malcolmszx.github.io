@@ -61,7 +61,7 @@ post
             <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
         </tr>
         <tr>
-            <td>comment</td> <td>String</td> <td>是</td> <td>评论id</td> <td> -  </td> <td>0</td>
+            <td>commentId</td> <td>String</td> <td>是</td> <td>评论id</td> <td> -  </td> <td>-</td>
         </tr>
          <tr>
             <td>addOrdelete</td> <td>String</td> <td>是</td> <td>true 添加 false 取消</td> <td> -  </td><td>-</td>
