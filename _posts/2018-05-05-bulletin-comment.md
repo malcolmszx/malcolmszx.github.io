@@ -32,7 +32,7 @@ post
             <td>content</td> <td>String</td> <td>是</td> <td>评论内容</td> <td> -  </td> <td>0</td>
         </tr>
          <tr>
-            <td>createTime</td> <td>String</td> <td>是</td> <td>评论时间</td> <td> -  </td><td>-</td>
+            <td>createTime</td> <td>Date</td> <td>是</td> <td>评论时间</td> <td> -  </td><td>-</td>
          </tr>
     </table> 
 5. **返回正确JSON示例**<br> 
