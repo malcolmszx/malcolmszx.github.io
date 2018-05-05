@@ -101,9 +101,6 @@ post
         <tr>
             <td>commentId</td> <td>String</td> <td>是</td> <td>评论id</td> <td> -  </td> <td>-</td>
         </tr>
-         <tr>
-            <td>addOrdelete</td> <td>String</td> <td>是</td> <td>true 添加 false 取消</td> <td> -  </td><td>-</td>
-         </tr>
     </table> 
 5. **返回正确JSON示例**<br> 
     {<br>
