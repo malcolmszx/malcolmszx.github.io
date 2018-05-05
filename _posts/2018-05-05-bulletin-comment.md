@@ -47,7 +47,7 @@ post
        &emsp; "msg": "请求失败"<br>
     }<br>
     
- ### 点赞/取消新闻公告评论
+### 点赞/取消新闻公告评论
 
 1. **请求uri**<br>
 bulletinComment/updateParise
