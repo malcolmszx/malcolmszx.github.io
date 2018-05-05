@@ -274,7 +274,8 @@ get
                  &emsp;&emsp;&emsp;&emsp;&emsp;"articleUrl":null,<br>
                  &emsp;&emsp;&emsp;&emsp;&emsp;"articleId":null,<br>
                  &emsp;&emsp;&emsp;&emsp;&emsp;"attachments":null,<br>
-                 &emsp;&emsp;&emsp;&emsp;&emsp; "type":{<br>
+                 &emsp;&emsp;&emsp;&emsp;&emsp;"type":<br>
+                 &emsp;&emsp;&emsp;&emsp;{<br>
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"id":"9ad5c3ec29bbf624b4784628",<br>
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"name":"员工发展",<br>
                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"insideShare":"1",<br>
@@ -345,7 +346,7 @@ post
      &emsp;"code": 200,<br>
      &emsp;"msg": "请求成功",<br>
      &emsp;"data": [<br>
-         &emsp;&emsp;&emsp;&emsp;{<br>
+         &emsp;&emsp;&emsp;{<br>
             &emsp;&emsp;&emsp;&emsp;"id": "5aebc35329bbf612bc09bc6b",<br>
             &emsp;&emsp;&emsp;&emsp; "title": "百度资讯发送消息",<br>
             &emsp;&emsp;&emsp;&emsp; "subTitle": null,<br>
@@ -358,31 +359,32 @@ post
             &emsp;&emsp;&emsp;&emsp;"articleUrl": null,<br>
             &emsp;&emsp;&emsp;&emsp; "articleId": null,<br>
             &emsp;&emsp;&emsp;&emsp;"attachments": null,<br>
-            &emsp;&emsp;&emsp;&emsp;"type": {<br>
-            &emsp;&emsp;&emsp;&emsp;"id": "9ad5c3ec29bbf624b4784628",<br>
-            &emsp;&emsp;&emsp;&emsp;"name": "员工发展",<br>
-            &emsp;&emsp;&emsp;&emsp;"insideShare": "1",<br>
-            &emsp;&emsp;&emsp;&emsp;"outsideShare": "0",<br>
-            &emsp;&emsp;&emsp;&emsp;"comment": null,<br>
-            &emsp;&emsp;&emsp;&emsp;"status": "1",<br>
-            &emsp;&emsp;&emsp;&emsp;"seq": null,<br>
-            &emsp;&emsp;&emsp;&emsp;"delete": "1",<br>
+            &emsp;&emsp;&emsp;&emsp;"type":<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;{<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"id": "9ad5c3ec29bbf624b4784628",<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"name": "员工发展",<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"insideShare": "1",<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"outsideShare": "0",<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"comment": null,<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"status": "1",<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"seq": null,<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"delete": "1",<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creator": null,<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creatorDate": null,<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"eid": "236"<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;},<br>
+            &emsp;&emsp;&emsp;&emsp;"readnum": 0,<br>
+            &emsp;&emsp;&emsp;&emsp;"praisenum": 0,<br>
             &emsp;&emsp;&emsp;&emsp;"creator": null,<br>
-            &emsp;&emsp;&emsp;&emsp;"creatorDate": null,<br>
-            &emsp;&emsp;&emsp;&emsp;"eid": "236"<br>
-            },<br>
-            "readnum": 0,<br>
-            "praisenum": 0,<br>
-            "creator": null,<br>
-            "publishDate": 1525399857,<br>
-            "eid": "236",<br>
-            "delete": "1",<br>
-            "top": "0",<br>
-            "orderType": "2",<br>
-            "bulletinType": "员工发展",<br>
-            "updateToporNodate": 1525399957,<br>
-            "bulletinMsgtype": "6"<br>
-        }<br>
-    ]<br>
+            &emsp;&emsp;&emsp;&emsp;"publishDate": 1525399857,<br>
+            &emsp;&emsp;&emsp;&emsp;"eid": "236",<br>
+            &emsp;&emsp;&emsp;&emsp;"delete": "1",<br>
+            &emsp;&emsp;&emsp;&emsp;"top": "0",<br>
+            &emsp;&emsp;&emsp;&emsp;"orderType": "2",<br>
+            &emsp;&emsp;&emsp;&emsp;"bulletinType": "员工发展",<br>
+            &emsp;&emsp;&emsp;&emsp;"updateToporNodate": 1525399957,<br>
+            &emsp;&emsp;&emsp;&emsp;"bulletinMsgtype": "6"<br>
+        &emsp;&emsp;&emsp;}<br>
+    &emsp;&emsp;&emsp;&emsp;]<br>
 }<br>
     
