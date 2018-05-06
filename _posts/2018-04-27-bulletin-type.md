@@ -16,10 +16,25 @@ tags:                               # 标签
 
 ### 创建新闻公告类型
 
-1. **请求uri**
+- **请求uri**
 
   /bulletinType/create
 
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "application/json"
+
+- **请求参数**
+
+  | Tables        | Are           | Cool          | Adress        | Tel           | Age           |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | col 3 is      | right-aligned |    $1600      | col 3 is      | right-aligned |     $1600     |
+  | col 2 is      | centered      |   col 2 is    | centered      | col 4 is      | centered      |
+  | zebra stripes | are neat      |   col 5 is    | centered      |       -       |      -        |    
 
 1. **请求uri**
 
