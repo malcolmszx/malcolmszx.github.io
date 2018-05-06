@@ -28,9 +28,17 @@ tags:                               # 标签
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | col 3 is      | right-aligned |    $1600      | col 3 is      | right-aligned |     $1600     |
-  | col 2 is      | centered      |   col 2 is    | centered      | col 4 is      | centered      |
-  | zebra stripes | are neat      |   col 5 is    | centered      |       -       |      -        |    
+  | id            | String        |    否         | 新闻公告类型id | -             |     -         |
+  | eid           | String        |    是         | 工作圈id      | -              |      -       |
+  | name          | String        |    是         | 类型          | -             |     -       |
+  | seq           | String        |    是         | 显示顺序      | -             |     101       |
+  | status        | String        |    是         | 0为禁用 1为启用 | -            |     -       |
+  | insideShare   | String        |    是         | 内部分享 0为不允许 1为允许 | -  |     101    |
+  | outsideShare  | String        |    是         | 外部分享 0为不允许 1为允许 | -  |     -       |
+  | comment       | String        |    是         | 评论 0为不允许 1为允许 | -     |     101     |
+  | creator       | String        |    是         | 创建人ID  |        -            |     -       |
+  | creatorDate   | Date          |    是         | 创建日期 | -                  |     101       |
+  | delete        | String        |    是         | 删除 0为已删除 1为正常 | -         |     -     |
 
 - **请求参数**
 
@@ -59,7 +67,7 @@ tags:                               # 标签
          <tr>
             <td>outsideShare</td> <td>String</td> <td>是</td> <td>外部分享  0为不允许  1为允许</td> <td>  -   </td> <td>0</td>
         </tr>
-          <tr>
+        <tr>
             <td>comment</td> <td>String</td> <td>是</td> <td>评论  0为不允许  1为允许</td> <td>  -   </td> <td>1</td>
         </tr>
          <tr>
@@ -74,34 +82,27 @@ tags:                               # 标签
     </table>
 
 - **返回正确JSON示例**
-
 ```
   {
-    "code": 200,
-    "msg": "请求成功",
-    "data": null
+     "code": 200,
+     "msg": "请求成功",
+     "data": null
   }
 ```
 - **返回错误JSON示例**
-
+```
   {
-
-     "code": 201,
-
-     "msg": "请求失败"
-
+      "code": 201,
+      "msg": "请求失败"
   }
-
+```
 - **请求成功，但是创建失败**
-
+```
   {
-
-    "code": 202,
-
-    "msg": "该类型存在"
-
+      "code": 202,
+      "msg": "该类型存在"
   }
-
+```
 - **备注**
 
   当创建的新闻公告类型已经存在时，创建失败，返回状态码code：202 msg:该类型存在
