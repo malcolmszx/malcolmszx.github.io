@@ -79,7 +79,13 @@ tags:                               # 标签
     "code": 200,
     "msg": "请求成功",
     "data": null
-  } 
+  }
+
+  {
+    "code": 200,
+    "msg": "请求成功",
+    "data": null
+  }
 
 7. **返回错误JSON示例**
 
