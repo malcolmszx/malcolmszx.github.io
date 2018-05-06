@@ -1,7 +1,7 @@
 ---
 layout:  post
 title: 新闻公告管理员
-subtitle: admin curd 
+subtitle: admin eiditor
 date:   2018-05-03
 author:   BY Malcolmszx
 header-img: img/post-bg-ios9-web.jpg
@@ -9,61 +9,54 @@ catalog: true
 tags:
     - interface
 ---
+
 ### 创建新闻公告管理员
 
-1. **请求uri**<br>
-bulletinAdmin/create
-2. **请求方式**<br>
-post
-3. **请求头**<br>
-"key" : "Content-Type",  "value" : "application/json"
-4. **请求参数**
-     <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-        <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>101</td>
-        </tr>
-        <tr>
-        <td>pubId</td> <td>String</td> <td>是</td> <td>公共号ID</td> <td> -  </td> <td>XT-717062e8-8ee5-4873-a607-e8ccf4e8068f</td>
-        </tr>
-        <tr>
-            <td>id</td> <td>String</td> <td> 否</td> <td>管理员ID</td> <td> -  </td> <td>-</td>
-        </tr>
-         <tr>
-            <td>name</td> <td>String</td> <td>是</td> <td>名称</td> <td> -  </td> <td>-</td>
-        </tr>
-         <tr>
-            <td>oid</td> <td>String</td> <td>是</td> <td>用户oid</td> <td> -  </td> <td>-</td>
-        </tr>
-         <tr>
-            <td>status</td> <td>String</td> <td>是</td> <td>0为删除 1为正常</td> <td> - </td> <td>1</td>
-        </tr>
-        <tr>
-            <td>creatorName</td> <td>String</td> <td>是</td> <td>创建人名称</td> <td> -  </td> <td>-</td>
-        </tr>
-        <tr>
-            <td>creatorOId</td> <td>String</td> <td>是</td> <td>创建人oID</td> <td> -  </td> <td>-</td>
-         </tr>
-         <tr>
-            <td>creatorDate</td> <td>Date</td> <td>是</td> <td>创建日期</td> <td> -  </td><td>1525230414</td>
-         </tr>
-    </table> 
-5. **返回正确JSON示例**<br>
-    {<br>
-        &emsp;"code": 200,<br>
-        &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br> 
-    }<br>
-6. **返回错误JSON示例**<br>
-    {<br>
-       &emsp; "code": 201,<br>
-       &emsp; "msg": "请求失败"<br>
-    }<br>
-7. **备注**<br>
-     兼容添加多个新闻公告管理员,后端接收json数组
-     
+- **请求uri**
+
+  /bulletinAdmin/create
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "application/json"
+
+- **请求参数**
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | id            | String        |    否         | 管理员id      | -             |     -         |
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | pubId         | String        |    是         | 公共号id | -  |XT-717062e8-8ee5-4873-a607-e8ccf4e8068f |
+  | name          | String        |    是         | 管理员姓名    | -            |     -         |
+  | oid           | String        |    是         | 管理员oid     | -            |     -         |
+  | status        | String        |    是         | 0为删除 1为正常 | -            |     1        |
+  | creatorOId    | String        |    是         | 创建人oID      | -             |     -        |
+  | creatorName   | String        |    是         | 创建人姓名     |        -      |     -        |
+  | creatorDate   | Date          |    是         | 创建日期       | -             |     -        |
+
+- **返回正确JSON示例**
+```
+  {
+     "code": 200,
+     "msg": "请求成功",
+     "data": null
+  }
+```
+- **返回错误JSON示例**
+```
+  {
+      "code": 201,
+      "msg": "请求失败"
+  }
+```
+- **备注**
+
+  兼容添加多个新闻公告管理员,后端接收json数组.
+
 ### 获取新闻公告管理员列表
 
 - **请求uri**<br>
@@ -86,7 +79,7 @@ post
         <tr>
             <td>status</td> <td>String</td> <td>是</td> <td>0为删除 1为正常</td> <td> - </td> <td>1</td>
         </tr>
-    </table> 
+    </table>
 - **返回正确JSON示例**<br>
     {<br>
      &emsp;"code": 200,<br>
@@ -121,7 +114,7 @@ post
        &emsp; "code": 201,<br>
        &emsp; "msg": "请求失败"<br>
     }<br>
-    
+
 ### 删除新闻公告管理员
 
 - **请求uri** <br>
@@ -148,19 +141,19 @@ post
         <tr>
             <td>ids</td> <td>List</td> <td>是</td> <td>管理员编号id</td> <td> -  </td> <td>5ae92a4f29bbf603904abcf5</td>
         </tr>
-    </table> 
+    </table>
  - **返回正确JSON示例**<br>
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br> 
+        &emsp;"data": null<br>
     }<br>
 - **返回错误JSON示例**<br>
     {<br>
        &emsp; "code": 201,<br>
        &emsp; "msg": "请求失败"<br>
     }<br>
-    
+
 ### 查询新闻公告管理员
 
 - **请求uri**<br>
@@ -186,7 +179,7 @@ post
         <tr>
             <td>name</td> <td>String</td> <td>是</td> <td>名称</td> <td> -  </td> <td>黄</td>
         </tr>
-   </table> 
+   </table>
 - **返回正确JSON示例**<br>    
 {<br>
      &emsp;"code": 200,<br>
