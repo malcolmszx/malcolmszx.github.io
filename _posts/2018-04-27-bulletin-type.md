@@ -32,7 +32,7 @@ tags:                               # 标签
   | col 2 is      | centered      |   col 2 is    | centered      | col 4 is      | centered      |
   | zebra stripes | are neat      |   col 5 is    | centered      |       -       |      -        |    
 
-5. **请求参数**
+- **请求参数**
 
     <table>
         <tr>
@@ -73,7 +73,7 @@ tags:                               # 标签
         </tr>
     </table>
 
-6. **返回正确JSON示例**
+- **返回正确JSON示例**
 
   {
     "code": 200,
