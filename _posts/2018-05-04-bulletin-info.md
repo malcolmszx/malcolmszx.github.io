@@ -1,7 +1,7 @@
 ---
 layout:     post
 title: 新闻公告详情
-subtitle: editor and so on 
+subtitle: editor and so on
 date:       2018-05-04
 author:     BY Malcolmszx
 header-img: img/post-bg-debug.png
@@ -58,12 +58,12 @@ post
          <tr>
             <td>type</td> <td>Json</td> <td>是</td> <td> 公告类型Json对象 </td> <td> -  </td><td>-</td>
          </tr>
-    </table> 
-5. **返回正确JSON示例**<br> 
+    </table>
+5. **返回正确JSON示例**<br>
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br> 
+        &emsp;"data": null<br>
     }<br>
 6. **返回错误JSON示例**<br>
     {<br>
@@ -72,7 +72,7 @@ post
     }<br>
 7. **备注**<br>
      参数：type 为新闻公告类型的json, 创建新闻公告详情时异步请求获取其对象具体uri 参考新闻公告类型接口文档
-    
+
 ### 置顶或取消置顶(兼容批量)
 
 - **请求uri**<br>
@@ -92,12 +92,12 @@ post
         <tr>
             <td>top</td> <td>String</td> <td>是</td> <td>0取消置顶 1置顶</td> <td> -  </td> <td>-</td>
         </tr>
-    </table> 
-- **返回正确JSON示例**<br> 
+    </table>
+- **返回正确JSON示例**<br>
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br> 
+        &emsp;"data": null<br>
     }<br>
 - **返回错误JSON示例**<br>
     {<br>
@@ -106,7 +106,7 @@ post
     }<br>
 - **备注**<br>
     支持批量处理，后端接收Json数组
-    
+
 ### 删除新闻公告详情(兼容批量删除)
 
 - **请求uri**<br>
@@ -123,19 +123,19 @@ post
         <tr>
             <td>ids</td> <td>List</td> <td>是</td> <td>新闻公告ids</td> <td> -  </td> <td>-</td>
         </tr>
-    </table> 
-- **返回正确JSON示例**<br> 
+    </table>
+- **返回正确JSON示例**<br>
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br> 
+        &emsp;"data": null<br>
     }<br>
 - **返回错误JSON示例**<br>
     {<br>
        &emsp; "code": 201,<br>
        &emsp; "msg": "请求失败"<br>
     }<br>
-    
+
 ### 条件查询新闻公告详情
 
 - **请求uri**<br>
@@ -167,12 +167,12 @@ post
         <tr>
             <td>status</td> <td>String</td> <td>是</td> <td> 0为草稿 1为发布 </td> <td> - </td> <td>1</td>
         </tr>
-    </table> 
-- **返回正确JSON示例**<br> 
-{<br> 
-    &emsp;"code":200,<br> 
-    &emsp;"msg":"请求成功",<br> 
-    &emsp;"data":{<br> 
+    </table>
+- **返回正确JSON示例**<br>
+{<br>
+    &emsp;"code":200,<br>
+    &emsp;"msg":"请求成功",<br>
+    &emsp;"data":{<br>
         &emsp;&emsp;&emsp;"content":[<br>
            &emsp;&emsp;&emsp;&emsp;{<br>
                  &emsp;&emsp;&emsp;&emsp;&emsp;"id":"5aebc35329bbf612bc09bc6b",<br>
@@ -213,10 +213,10 @@ post
                 &emsp;&emsp;&emsp;&emsp;&emsp;"bulletinMsgtype":"6"<br>
              &emsp;&emsp;&emsp;&emsp;}<br>
          &emsp;&emsp;&emsp;],<br>
-        "totalPages":1,<br> 
-        "totalElements":1,<br> 
-        "last":true,<br> 
-        "number":0,<br> 
+        "totalPages":1,<br>
+        "totalElements":1,<br>
+        "last":true,<br>
+        "number":0,<br>
         "size":20,<br>
         "sort":[<br>
          &emsp;&emsp;{<br>
@@ -227,8 +227,8 @@ post
                 &emsp;&emsp;&emsp;&emsp;"ascending":false,<br>
                 &emsp;&emsp;&emsp;&emsp;"descending":true<br>
           &emsp;&emsp;}<br>
-         &emsp;],<br> 
-        "numberOfElements":1,<br> 
+         &emsp;],<br>
+        "numberOfElements":1,<br>
         "first":true<br>
      &emsp;}<br>
 }<br>
@@ -255,11 +255,11 @@ get
             <td>pageSize</td> <td>int</td> <td>是</td> <td>页面大小</td> <td> 20 </td> <td>20</td>
         </tr>
     </table>
-- **返回正确JSON示例**<br> 
-{<br> 
-    &emsp;"code":200,<br> 
-    &emsp;"msg":"请求成功",<br> 
-    &emsp;"data":{<br> 
+- **返回正确JSON示例**<br>
+{<br>
+    &emsp;"code":200,<br>
+    &emsp;"msg":"请求成功",<br>
+    &emsp;"data":{<br>
         &emsp;&emsp;&emsp;"content":[<br>
            &emsp;&emsp;&emsp;&emsp;{<br>
                  &emsp;&emsp;&emsp;&emsp;&emsp;"id":"5aebc35329bbf612bc09bc6b",<br>
@@ -301,10 +301,10 @@ get
                 &emsp;&emsp;&emsp;&emsp;&emsp;"bulletinMsgtype":"6"<br>
              &emsp;&emsp;&emsp;&emsp;}<br>
          &emsp;&emsp;&emsp;],<br>
-        "totalPages":1,<br> 
-        "totalElements":1,<br> 
-        "last":true,<br> 
-        "number":0,<br> 
+        "totalPages":1,<br>
+        "totalElements":1,<br>
+        "last":true,<br>
+        "number":0,<br>
         "size":20,<br>
         "sort":[<br>
          &emsp;&emsp;{<br>
@@ -315,8 +315,8 @@ get
                 &emsp;&emsp;&emsp;&emsp;"ascending":false,<br>
                 &emsp;&emsp;&emsp;&emsp;"descending":true<br>
           &emsp;&emsp;}<br>
-         &emsp;],<br> 
-        "numberOfElements":1,<br> 
+         &emsp;],<br>
+        "numberOfElements":1,<br>
         "first":true<br>
      &emsp;}<br>
 }<br>
@@ -457,4 +457,5 @@ post
         &emsp;&emsp;&emsp;}<br>
     &emsp;&emsp;&emsp;&emsp;]<br>
 }<br>
-       
+
+### 备注
