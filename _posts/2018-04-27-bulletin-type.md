@@ -11,19 +11,23 @@ tags:                               # 标签
 ---
 
 # 新闻公告
-> 这是我的第一篇博客。
 
 ## web端对应的接口
 
-
 ### 创建新闻公告类型
 
-1. **请求uri**<br>
-/bulletinType/create
-2. **请求方式**<br>
-post
-3. **请求头**<br>
-"key" : "Content-Type",  "value" : "application/json"
+1. **请求uri**
+
+  /bulletinType/create
+
+2. **请求方式**
+
+  post
+
+3. **请求头**
+
+  "key" : "Content-Type",  "value" : "application/json"
+
 4. **请求参数**
     <table>
         <tr>
@@ -86,8 +90,10 @@ post
       "msg": "该类型存在"
   }
 
-8. **备注**<br>
-    当创建的新闻公告类型已经存在时，创建失败，返回状态码code：202 msg:该类型存在
+8. **备注**
+
+  当创建的新闻公告类型已经存在时，创建失败，返回状态码code：202 msg:该类型存在
+
 ### 编辑新闻公告类型
 
 1. **请求uri**<br>
