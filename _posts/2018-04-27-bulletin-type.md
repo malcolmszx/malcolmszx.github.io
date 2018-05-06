@@ -19,7 +19,7 @@ tags:                               # 标签
 1. **请求uri**
 
   /bulletinType/create
-  
+
 
 1. **请求uri**
 
