@@ -1,6 +1,6 @@
 ---
 layout: post                    # 使用的布局（不需要改）
-title:  新闻公告类型             # 标题 
+title:  新闻公告类型             # 标题
 subtitle:  Hello World, Hello Blog # 副标题
 date:       2018-04-27              # 时间
 author:     Malcolmszx              # 作者
@@ -63,12 +63,15 @@ post
             <td>delete</td> <td>String</td> <td>是</td> <td>删除   0为已删除 1为正常</td> <td>  1 </td> <td>1</td>
         </tr>
     </table>
-5. **返回正确JSON示例**<br>
-    {<br>
-        &emsp;"code": 200,<br>
-        &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br> 
-    }<br>
+
+5. **返回正确JSON示例**
+
+    {
+        "code": 200,
+        "msg": "请求成功",
+        "data": null
+    }
+
 6. **返回错误JSON示例**<br>
     {<br>
        &emsp; "code": 201,<br>
@@ -132,7 +135,7 @@ post
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br> 
+        &emsp;"data": null<br>
     }<br>
 6. **返回错误JSON示例**<br>
     {<br>
@@ -206,7 +209,7 @@ post
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br> 
+        &emsp;"data": null<br>
     }<br>
 6. **返回错误JSON示例**<br>
     {<br>
@@ -246,11 +249,10 @@ post
     {<br>
         &emsp;"code": 200,<br>
         &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br> 
+        &emsp;"data": null<br>
     }<br>
 6. **返回错误JSON示例**<br>
     {<br>
        &emsp; "code": 201,<br>
        &emsp; "msg": "请求失败"<br>
     }<br>
-
