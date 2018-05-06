@@ -119,7 +119,7 @@ tags:
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | ids           | String        |    是         | 新闻公告ids     | -             |      101      |
 
-**返回正确JSON示例**
+- **返回正确JSON示例**
 ```
  {
      "code": 200,
@@ -313,136 +313,139 @@ tags:
 ### 懒惰加载最新新闻公告详情
 
 - **请求uri**
-bulletinInfo/app/getLatest
-- **请求方式**
-post
-- **请求头**
-"key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
-- **请求参数**
-     <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-        <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>236</td>
-        </tr>
-       <tr>
-            <td>publishDate</td> <td>Date</td> <td>是</td> <td>发布时间</td> <td> -  </td> <td>2018/5/4 10:10:57</td>
-       </tr>
-    </table>
- - **返回正确JSON示例**
- {
-     "code": 200,
-     "msg": "请求成功",
-     "data": [
-         {
-            "id": "5aebc35329bbf612bc09bc6b",
-             "title": "百度资讯发送消息",
-             "subTitle": null,
-             "author": "5ad5c3ec29bbf624b4784628",
-             "status": "1",
-            "expireDate": 1525399807,
-             "url": null,
-             "content": null,
-             "pic": null,
-            "articleUrl": null,
-             "articleId": null,
-            "attachments": null,
-            "type":
-            {
-            "id": "9ad5c3ec29bbf624b4784628",
-            "name": "员工发展",
-            "insideShare": "1",
-            "outsideShare": "0",
-            "comment": null,
-            "status": "1",
-            "seq": null,
-            "delete": "1",
-            "creator": null,
-            "creatorDate": null,
-            "eid": "236"
-            },
-            "readnum": 0,
-            "praisenum": 0,
-            "creator": null,
-            "publishDate": 1525399857,
-            "eid": "236",
-            "delete": "1",
-            "top": "0",
-            "orderType": "2",
-            "bulletinType": "员工发展",
-            "updateToporNodate": 1525399957,
-            "bulletinMsgtype": "6"
-        }
-    ]
-}
 
+  bulletinInfo/app/getLatest
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
+
+- **请求参数**
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | publishDate   | Date          |    是         | 发布时间       | -             |     -        |
+
+ - **返回正确JSON示例**
+   ```
+   {
+       "code": 200,
+       "msg": "请求成功",
+       "data": [
+                 {
+                     "id": "5aebc35329bbf612bc09bc6b",
+                     "title": "百度资讯发送消息",
+                     "subTitle": null,
+                     "author": "5ad5c3ec29bbf624b4784628",
+                     "status": "1",
+                     "expireDate": 1525399807,
+                     "url": null,
+                     "content": null,
+                     "pic": null,
+                     "articleUrl": null,
+                     "articleId": null,
+                     "attachments": null,
+                     "type":
+                              {
+                                  "id": "9ad5c3ec29bbf624b4784628",
+                                  "name": "员工发展",
+                                  "insideShare": "1",
+                                  "outsideShare": "0",
+                                  "comment": null,
+                                  "status": "1",
+                                  "seq": null,
+                                  "delete": "1",
+                                  "creator": null,
+                                  "creatorDate": null,
+                                  "eid": "236"
+                              },
+                      "readnum": 0,
+                      "praisenum": 0,
+                      "creator": null,
+                      "publishDate": 1525399857,
+                      "eid": "236",
+                      "delete": "1",
+                      "top": "0",
+                      "orderType": "2",
+                      "bulletinType": "员工发展",
+                      "updateToporNodate": 1525399957,
+                      "bulletinMsgtype": "6"
+                 }
+             ]
+  }
+```
 ### 懒惰加载某类新闻公告详情
 
 - **请求uri**
-bulletinInfo/app/type/getLatest
+
+  bulletinInfo/app/type/getLatest
+
 - **请求方式**
-post
+
+  post
+
 - **请求头**
-"key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
+
+  "key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
+
 - **请求参数**
-     <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-        <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>236</td>
-        </tr>
-        <tr>
-            <td>bulletinType</td> <td>String</td> <td>是</td> <td>新闻公告类型</td> <td> -  </td> <td>员工发展</td>
-        </tr>
-       <tr>
-            <td>publishDate</td> <td>Date</td> <td>是</td> <td>发布时间</td> <td> -  </td> <td>2018/5/4 10:10:57</td>
-       </tr>
-    </table>
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | bulletinType  | String        |    是         | 公告类型       | -            |     -         |
+  | publishDate   | Date          |    是         | 发布时间       | -             |     -        |
+
  - **返回正确JSON示例**
- {
-     "code": 200,
-     "msg": "请求成功",
-     "data": [
-         {
-            "id": "5aebc35329bbf612bc09bc6b",
-             "title": "百度资讯发送消息",
-             "subTitle": null,
-             "author": "5ad5c3ec29bbf624b4784628",
-             "status": "1",
-            "expireDate": 1525399807,
-             "url": null,
-             "content": null,
-             "pic": null,
-            "articleUrl": null,
-             "articleId": null,
-            "attachments": null,
-            "type":
-            {
-            "id": "9ad5c3ec29bbf624b4784628",
-            "name": "员工发展",
-            "insideShare": "1",
-            "outsideShare": "0",
-            "comment": null,
-            "status": "1",
-            "seq": null,
-            "delete": "1",
-            "creator": null,
-            "creatorDate": null,
-            "eid": "236"
-            },
-            "readnum": 0,
-            "praisenum": 0,
-            "creator": null,
-            "publishDate": 1525399857,
-            "eid": "236",
-            "delete": "1",
-            "top": "0",
-            "orderType": "2",
-            "bulletinType": "员工发展",
-            "updateToporNodate": 1525399957,
-            "bulletinMsgtype": "6"
-        }
-    ]
-}
+   ```
+   {
+       "code": 200,
+       "msg": "请求成功",
+       "data": [
+                 {
+                     "id": "5aebc35329bbf612bc09bc6b",
+                     "title": "百度资讯发送消息",
+                     "subTitle": null,
+                     "author": "5ad5c3ec29bbf624b4784628",
+                     "status": "1",
+                     "expireDate": 1525399807,
+                     "url": null,
+                     "content": null,
+                     "pic": null,
+                     "articleUrl": null,
+                     "articleId": null,
+                     "attachments": null,
+                     "type":
+                              {
+                                "id": "9ad5c3ec29bbf624b4784628",
+                                "name": "员工发展",
+                                "insideShare": "1",
+                                "outsideShare": "0",
+                                "comment": null,
+                                "status": "1",
+                                "seq": null,
+                                "delete": "1",
+                                "creator": null,
+                                "creatorDate": null,
+                                "eid": "236"
+                                    },
+                    "readnum": 0,
+                    "praisenum": 0,
+                    "creator": null,
+                    "publishDate": 1525399857,
+                    "eid": "236",
+                    "delete": "1",
+                    "top": "0",
+                    "orderType": "2",
+                    "bulletinType": "员工发展",
+                    "updateToporNodate": 1525399957,
+                    "bulletinMsgtype": "6"
+                }
+            ]
+  }
+  ```
