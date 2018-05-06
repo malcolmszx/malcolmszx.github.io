@@ -10,10 +10,6 @@ tags:                               # 标签
     - Interface
 ---
 
-# 新闻公告
-
-## web端对应的接口
-
 ### 创建新闻公告类型
 
 - **请求uri**
@@ -30,23 +26,11 @@ tags:                               # 标签
 
 - **请求参数**
 
-  | Tables        | Are           | Cool          | Adress        | Tel           | Age           |
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | col 3 is      | right-aligned |    $1600      | col 3 is      | right-aligned |     $1600     |
   | col 2 is      | centered      |   col 2 is    | centered      | col 4 is      | centered      |
   | zebra stripes | are neat      |   col 5 is    | centered      |       -       |      -        |    
-
-1. **请求uri**
-
-  /bulletinType/create
-
-2. **请求方式**
-
-  post
-
-3. **请求头**
-
-  "key" : "Content-Type",  "value" : "application/json"
 
 5. **请求参数**
 
