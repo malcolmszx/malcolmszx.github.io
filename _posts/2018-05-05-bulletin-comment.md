@@ -50,26 +50,26 @@ tags:
 
 ### 点赞/取消新闻公告评论
 
-1. **请求uri**
+- **请求uri**
 
   bulletinComment/updateParise
 
-2. **请求方式**
+- **请求方式**
 
   post
 
-3. **请求头**
+- **请求头**
 
   "key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
 
-4. **请求参数**
+- **请求参数**
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | commentId     | String        |    是         | 评论id         | -             |      101      |
   | addOrdelete   | String        |    是         | true 添加 false 取消| -  |- |
 
-5. **返回正确JSON示例**
+- **返回正确JSON示例**
   ```
   {
       "code": 200,
@@ -77,7 +77,7 @@ tags:
       "data": null
   }
   ```
-6. **返回错误JSON示例**
+- **返回错误JSON示例**
   ```
   {
       "code": 201,
@@ -86,35 +86,38 @@ tags:
   ```
 ### 删除新闻公告评论
 
-1. **请求uri**
-bulletinComment/delete/{bulletinId}/{commentId}
-2. **请求方式**
-post
-3. **请求头**
-"key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
-4. **请求参数**
-     <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-        <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>101</td>
-        </tr>
-        <tr>
-            <td>bulletinId</td> <td>String</td> <td>是</td> <td>新闻公告id</td> <td> -  </td> <td>-</td>
-        </tr>
-        <tr>
-            <td>commentId</td> <td>String</td> <td>是</td> <td>评论id</td> <td> -  </td> <td>-</td>
-        </tr>
-    </table>
-5. **返回正确JSON示例**
-    {
-        "code": 200,
-        "msg": "请求成功",
-        "data": null
-    }
-6. **返回错误JSON示例**
-    {
-        "code": 201,
-        "msg": "请求失败"
-    }
+- **请求uri**
+
+  bulletinComment/delete/{bulletinId}/{commentId}
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
+
+- **请求参数**
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | eid           | String        |    是         | 工作圈id       | -             |      101      |
+  | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
+  | commentId     | String        |    是         | 评论id         | -             |      101      |
+
+- **返回正确JSON示例**
+  ```
+  {
+      "code": 200,
+      "msg": "请求成功",
+      "data": null
+  }
+  ````   
+- **返回错误JSON示例**
+  ```
+  {
+      "code": 201,
+      "msg": "请求失败"
+  }
+  ```
