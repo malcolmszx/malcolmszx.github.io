@@ -14,7 +14,7 @@ tags:
 
 - **请求uri**
 
-  /bulletinAdmin/create
+  bulletinAdmin/create
 
 - **请求方式**
 
@@ -59,142 +59,141 @@ tags:
 
 ### 获取新闻公告管理员列表
 
-- **请求uri**<br>
-bulletinAdmin/list
-- **请求方式**<br>
-post
-- **请求头**<br>
-"key" : "Content-Type",  "value" : "x-www-form-urlencoded"<br>
+- **请求uri**
+
+  bulletinAdmin/list
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "x-www-form-urlencoded"
+
 - **请求参数**
-    <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-        <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>236</td>
-        </tr>
-        <tr>
-            <td>pubId</td> <td>String</td> <td>是</td> <td>公共号ID</td> <td> -  </td> <td>XT-717062e8-8ee5-4873-a607-e8ccf4e8068f</td>
-        </tr>
-        <tr>
-            <td>status</td> <td>String</td> <td>是</td> <td>0为删除 1为正常</td> <td> - </td> <td>1</td>
-        </tr>
-    </table>
-- **返回正确JSON示例**<br>
-    {<br>
-     &emsp;"code": 200,<br>
-     &emsp;"msg": "请求成功",<br>
-     &emsp;"data": [<br>
-          &emsp;&emsp;&emsp;&emsp;{<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;"eid": "236",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "pubId": "XT-717062e8-8ee5-4873-a607-e8ccf4e8068f",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "id": "5aea747329bbf602349dcf5d",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "oid": "5ae92a4f29bbf603904abce9",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "name": "黄小明",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "creatorOId": "5ae92a4f29bbf603904abcf5",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "creatorName": "张航",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "creatorDate": 1525229096,<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "status": "1"<br>
-        &emsp;&emsp;&emsp;&emsp;},<br>
-        &emsp;&emsp;&emsp;&emsp;{<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "eid": "236",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "pubId": "XT-717062e8-8ee5-4873-a607-e8ccf4e8068f",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "id": "5aea747329bbf602349dcf5e",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "oid": "5be82a4f29bbf603904abce9",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "name": "李贵",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "creatorOId": "5ae92a4f29bbf603904abcf5",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "creatorName": "张航",<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "creatorDate": 1625228096,<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp; "status": "1"<br>
-         &emsp;&emsp;&emsp;&emsp;}<br>
-     &emsp;&emsp;&emsp;]<br>
-}<br>
-- **返回错误JSON示例**<br>
-    {<br>
-       &emsp; "code": 201,<br>
-       &emsp; "msg": "请求失败"<br>
-    }<br>
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | pubId         | String        |    是         | 公共号id | -  |XT-717062e8-8ee5-4873-a607-e8ccf4e8068f |
+  | status        | String        |    是         | 0为删除 1为正常 | -            |     1        |
+
+  - **返回正确JSON示例**
+  ```
+    {
+      "code": 200,
+      "msg": "请求成功",
+      "data": [
+                {
+                  "eid": "236",
+                  "pubId": "XT-717062e8-8ee5-4873-a607-e8ccf4e8068f",
+                  "id": "5aea747329bbf602349dcf5d",
+                  "oid": "5ae92a4f29bbf603904abce9",
+                  "name": "黄小明",
+                  "creatorOId": "5ae92a4f29bbf603904abcf5",
+                  "creatorName": "张航",
+                  "creatorDate": 1525229096,
+                  "status": "1"
+               },
+               {
+                  "eid": "236",
+                  "pubId": "XT-717062e8-8ee5-4873-a607-e8ccf4e8068f",
+                  "id": "5aea747329bbf602349dcf5e",
+                  "oid": "5be82a4f29bbf603904abce9",
+                  "name": "李贵",
+                  "creatorOId": "5ae92a4f29bbf603904abcf5",
+                  "creatorName": "张航",
+                  "creatorDate": 1625228096,
+                  "status": "1"
+              }
+           ]
+  }
+```
+- **返回错误JSON示例**
+```
+  {
+     "code": 201,
+     "msg": "请求失败"
+  }
+```  
 
 ### 删除新闻公告管理员
 
-- **请求uri** <br>
-bulletinAdmin/delete
-- **请求方式** <br>
-post
-- **请求头** <br>
-"key" : "Content-Type",  "value" : "x-www-form-urlencoded"<br>
+- **请求uri**
+
+  bulletinAdmin/delete
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "x-www-form-urlencoded"
+
 - **请求参数**
 
-    <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-        <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>236</td>
-        </tr>
-        <tr>
-            <td>pubId</td> <td>String</td> <td>是</td> <td>公共号ID</td> <td> -  </td> <td>XT-717062e8-8ee5-4873-a607-e8ccf4e8068f</td>
-        </tr>
-        <tr>
-            <td>status</td> <td>String</td> <td>是</td> <td>0为删除 1为正常</td> <td> - </td> <td>1</td>
-        </tr>
-        <tr>
-            <td>ids</td> <td>List</td> <td>是</td> <td>管理员编号id</td> <td> -  </td> <td>5ae92a4f29bbf603904abcf5</td>
-        </tr>
-    </table>
- - **返回正确JSON示例**<br>
-    {<br>
-        &emsp;"code": 200,<br>
-        &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br>
-    }<br>
-- **返回错误JSON示例**<br>
-    {<br>
-       &emsp; "code": 201,<br>
-       &emsp; "msg": "请求失败"<br>
-    }<br>
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | pubId         | String        |    是         | 公共号id | -  |XT-717062e8-8ee5-4873-a607-e8ccf4e8068f |
 
+- **返回正确JSON示例**
+```
+  {
+     "code": 200,
+     "msg": "请求成功",
+     "data": null
+  }
+```
+- **返回错误JSON示例**
+```
+  {
+      "code": 201,
+      "msg": "请求失败"
+  }
+```
 ### 查询新闻公告管理员
 
-- **请求uri**<br>
-bulletinAdmin/query
-- **请求方式**<br>
-post
-- **请求头**<br>
-"key" : "Content-Type",  "value" : "x-www-form-urlencoded"<br>
-- **请求参数**   
-  <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-        <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td> -  </td> <td>236</td>
-        </tr>
-        <tr>
-            <td>pubId</td> <td>String</td> <td>是</td> <td>公共号ID</td> <td> -  </td> <td>XT-717062e8-8ee5-4873-a607-e8ccf4e8068f</td>
-        </tr>
-        <tr>
-            <td>status</td> <td>String</td> <td>是</td> <td>0为删除 1为正常</td> <td> - </td> <td>1</td>
-        </tr>
-        <tr>
-            <td>name</td> <td>String</td> <td>是</td> <td>名称</td> <td> -  </td> <td>黄</td>
-        </tr>
-   </table>
-- **返回正确JSON示例**<br>    
-{<br>
-     &emsp;"code": 200,<br>
-     &emsp;"msg": "请求成功",<br>
-     &emsp;"data": [<br>
-        &emsp;&emsp;&emsp;{<br>
-            &emsp;&emsp;&emsp;&emsp;"eid": "236",<br>
-            &emsp;&emsp;&emsp;&emsp;"pubId": "XT-717062e8-8ee5-4873-a607-e8ccf4e8068f",<br>
-            &emsp;&emsp;&emsp;&emsp;"id": "5aea747329bbf602349dcf5d",<br>
-            &emsp;&emsp;&emsp;&emsp;"oid": "5ae92a4f29bbf603904abce9",<br>
-            &emsp;&emsp;&emsp;&emsp;"name": "黄小明",<br>
-            &emsp;&emsp;&emsp;&emsp;"creatorOId": "5ae92a4f29bbf603904abcf5",<br>
-            &emsp;&emsp;&emsp;&emsp;"creatorName": "张航",<br>
-            &emsp;&emsp;&emsp;&emsp;"creatorDate": 1525229960,<br>
-            &emsp;&emsp;&emsp;&emsp; "status": "0"<br>
-            &emsp;&emsp;&emsp;}<br>
-    &emsp;]<br>
-}<br>
+- **请求uri**
+
+  bulletinAdmin/query
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "x-www-form-urlencoded"
+
+- **请求参数**
+
+| 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+| ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+| eid           | String        |    是         | 工作圈id      | -             |      101      |
+| pubId         | String        |    是         | 公共号id | -  |XT-717062e8-8ee5-4873-a607-e8ccf4e8068f |
+| name          | String        |    是         | 管理员姓名    | -            |     -         |
+| status        | String        |    是         | 0为删除 1为正常 | -            |     1        |
+
+- **返回正确JSON示例**
+```
+  {
+    "code": 200,
+    "msg": "请求成功",
+    "data": [
+              {
+                  "eid": "236",
+                  "pubId": "XT-717062e8-8ee5-4873-a607-e8ccf4e8068f",
+                  "id": "5aea747329bbf602349dcf5d",
+                  "oid": "5ae92a4f29bbf603904abce9",
+                  "name": "黄小明",
+                  "creatorOId": "5ae92a4f29bbf603904abcf5",
+                  "creatorName": "张航",
+                  "creatorDate": 1525229960,
+                   "status": "0"
+             }
+           ]
+  }
+```
