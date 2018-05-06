@@ -32,13 +32,13 @@ tags:                               # 标签
   | eid           | String        |    是         | 工作圈id      | -             |      101      |
   | name          | String        |    是         | 类型          | -             |     -         |
   | seq           | String        |    是         | 显示顺序      | -             |     -         |
-  | status        | String        |    是         | 0为禁用 1为启用 | -            |     1        |
-  | insideShare   | String        |    是         | 内部分享 0为不允许 1为允许 | -  |     1        |
-  | outsideShare  | String        |    是         | 外部分享 0为不允许 1为允许 | -  |     0        |
-  | comment       | String        |    是         | 评论 0为不允许 1为允许 | -      |     -        |
+  | status        | String        |    是         | 0 禁用 1 启用 | -            |     1        |
+  | insideShare   | String        |    是         | 内部分享 0 不允许 1 允许 | -  |     1        |
+  | outsideShare  | String        |    是         | 外部分享 0 不允许 1 允许 | -  |     0        |
+  | comment       | String        |    是         | 评论 0 不允许 1 允许 | -      |     -        |
   | creator       | String        |    是         | 创建人ID  |        -           |     -        |
   | creatorDate   | Date          |    是         | 创建日期 | -                   |     -        |
-  | delete        | String        |    是         | 删除 0为已删除 1为正常 | -      |     -        |
+  | delete        | String        |    是         | 删除 0 已删除 1 正常 | -      |     -        |
 
 - **返回正确JSON示例**
 ```
@@ -88,13 +88,13 @@ tags:                               # 标签
   | eid           | String        |    是         | 工作圈id      | -             |      101      |
   | name          | String        |    是         | 类型          | -             |     -         |
   | seq           | String        |    是         | 显示顺序      | -             |     -         |
-  | status        | String        |    是         | 0为禁用 1为启用 | -            |     1        |
-  | insideShare   | String        |    是         | 内部分享 0为不允许 1为允许 | -  |     1        |
-  | outsideShare  | String        |    是         | 外部分享 0为不允许 1为允许 | -  |     0        |
-  | comment       | String        |    是         | 评论 0为不允许 1为允许 | -      |     -        |
+  | status        | String        |    是         | 0 禁用 1 启用 | -            |     1        |
+  | insideShare   | String        |    是         | 内部分享 0 不允许 1 允许 | -  |     1        |
+  | outsideShare  | String        |    是         | 外部分享 0 不允许 1 允许 | -  |     0        |
+  | comment       | String        |    是         | 评论 0 不允许 1 允许 | -      |     -        |
   | creator       | String        |    是         | 创建人ID  |        -           |     -        |
   | creatorDate   | Date          |    是         | 创建日期 | -                   |     -        |
-  | delete        | String        |    是         | 删除 0为已删除 1为正常 | -      |     -        |
+  | delete        | String        |    是         | 删除 0 已删除 1 正常 | -      |     -        |
 
 - **返回正确JSON示例**
 ```
@@ -129,7 +129,7 @@ tags:                               # 标签
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | eid           | String        |    是         | 工作圈id      | -             |      101      |
-  | delete        | String        |    是         | 删除 0为已删除 1为正常 | -      |     1        |
+  | delete        | String        |    是         | 删除 0 已删除 1 正常 | -      |     1        |
 
 - **返回正确JSON示例**
 ```
@@ -220,7 +220,7 @@ tags:                               # 标签
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | id            | String        |    否         | 新闻公告类型id | -             |     -         |
   | eid           | String        |    是         | 工作圈id      | -             |      101      |
-  | status        | String        |    是         | 0为禁用 1为启用 | -            |     -        |
+  | status        | String        |    是         | 0 禁用 1 启用 | -            |     -        |
 
 - **返回正确JSON示例**
 ```
