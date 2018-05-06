@@ -29,16 +29,16 @@ tags:                               # 标签
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | id            | String        |    否         | 新闻公告类型id | -             |     -         |
-  | eid           | String        |    是         | 工作圈id      | -              |      -       |
-  | name          | String        |    是         | 类型          | -             |     -       |
-  | seq           | String        |    是         | 显示顺序      | -             |     101       |
-  | status        | String        |    是         | 0为禁用 1为启用 | -            |     -       |
-  | insideShare   | String        |    是         | 内部分享 0为不允许 1为允许 | -  |     101    |
-  | outsideShare  | String        |    是         | 外部分享 0为不允许 1为允许 | -  |     -       |
-  | comment       | String        |    是         | 评论 0为不允许 1为允许 | -     |     101     |
-  | creator       | String        |    是         | 创建人ID  |        -            |     -       |
-  | creatorDate   | Date          |    是         | 创建日期 | -                  |     101       |
-  | delete        | String        |    是         | 删除 0为已删除 1为正常 | -         |     -     |
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | name          | String        |    是         | 类型          | -             |     -         |
+  | seq           | String        |    是         | 显示顺序      | -             |     -         |
+  | status        | String        |    是         | 0为禁用 1为启用 | -            |     1        |
+  | insideShare   | String        |    是         | 内部分享 0为不允许 1为允许 | -  |     1        |
+  | outsideShare  | String        |    是         | 外部分享 0为不允许 1为允许 | -  |     0        |
+  | comment       | String        |    是         | 评论 0为不允许 1为允许 | -      |     -        |
+  | creator       | String        |    是         | 创建人ID  |        -           |     -        |
+  | creatorDate   | Date          |    是         | 创建日期 | -                   |     -        |
+  | delete        | String        |    是         | 删除 0为已删除 1为正常 | -      |     -        |
 
 - **返回正确JSON示例**
 ```
@@ -80,7 +80,7 @@ post
             <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
         </tr>
         <tr>
-            <td>id</td> <td>String</td> <td>是</td> <td>新闻公告类型ID</td> <td>  -   </td> <td>5ae92a4f29bbf603104abce9</td>
+         <td>id</td> <td>String</td> <td>是</td> <td>新闻公告类型ID</td> <td> -  </td> <td>5ae92a4f29bbf603104abce9</td>
         </tr>
         <tr>
             <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td>  -   </td> <td>101</td>
