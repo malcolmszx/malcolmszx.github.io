@@ -82,19 +82,19 @@ tags:                               # 标签
 
 - **请求参数**
 
-| 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
-| ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-| id            | String        |    是         | 新闻公告类型id | -             |     -         |
-| eid           | String        |    是         | 工作圈id      | -             |      101      |
-| name          | String        |    是         | 类型          | -             |     -         |
-| seq           | String        |    是         | 显示顺序      | -             |     -         |
-| status        | String        |    是         | 0为禁用 1为启用 | -            |     1        |
-| insideShare   | String        |    是         | 内部分享 0为不允许 1为允许 | -  |     1        |
-| outsideShare  | String        |    是         | 外部分享 0为不允许 1为允许 | -  |     0        |
-| comment       | String        |    是         | 评论 0为不允许 1为允许 | -      |     -        |
-| creator       | String        |    是         | 创建人ID  |        -           |     -        |
-| creatorDate   | Date          |    是         | 创建日期 | -                   |     -        |
-| delete        | String        |    是         | 删除 0为已删除 1为正常 | -      |     -        |
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | id            | String        |    是         | 新闻公告类型id | -             |     -         |
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | name          | String        |    是         | 类型          | -             |     -         |
+  | seq           | String        |    是         | 显示顺序      | -             |     -         |
+  | status        | String        |    是         | 0为禁用 1为启用 | -            |     1        |
+  | insideShare   | String        |    是         | 内部分享 0为不允许 1为允许 | -  |     1        |
+  | outsideShare  | String        |    是         | 外部分享 0为不允许 1为允许 | -  |     0        |
+  | comment       | String        |    是         | 评论 0为不允许 1为允许 | -      |     -        |
+  | creator       | String        |    是         | 创建人ID  |        -           |     -        |
+  | creatorDate   | Date          |    是         | 创建日期 | -                   |     -        |
+  | delete        | String        |    是         | 删除 0为已删除 1为正常 | -      |     -        |
 
 - **返回正确JSON示例**
 ```
@@ -125,10 +125,10 @@ tags:                               # 标签
 
 - **请求参数**
 
-| 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
-| ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-| eid           | String        |    是         | 工作圈id      | -             |      101      |
-| delete        | String        |    是         | 删除 0为已删除 1为正常 | -      |     1        |
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | delete        | String        |    是         | 删除 0为已删除 1为正常 | -      |     1        |
 
 - **返回正确JSON示例**
 ```
@@ -153,75 +153,84 @@ tags:                               # 标签
   }
 ```
 ### 删除新闻公告类型
-1. **请求uri**<br>
-/bulletinType/delete
-2. **请求方式**<br>
-post
-3. **请求头**<br>
-"key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
-4. **请求参数**
-    <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-         <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td>  -   </td> <td>236</td>
-        </tr>
-        <tr>
-            <td>id</td> <td>String</td> <td> 是 </td> <td>新闻公告类型ID</td> <td>  -   </td> <td></td>
-        </tr>
-         <tr>
-            <td>name</td> <td>String</td> <td>是</td> <td>名称</td> <td>  -   </td> <td>人员发展</td>
-        </tr>
-    </table>
-5. **返回正确JSON示例**<br>
-    {<br>
-        &emsp;"code": 200,<br>
-        &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br>
-    }<br>
-6. **返回错误JSON示例**<br>
-    {<br>
-       &emsp; "code": 201,<br>
-       &emsp; "msg": "请求失败"<br>
-    }<br>
-7. **请求成功，但是删除失败**<br>
-  {<br>
-       &emsp; "code": 202,<br>
-       &emsp; "msg": "该分类下有新闻公告内容，暂不可删除，如需删除，请先移走该分类下的内容"<br>
-       &emsp; "data": null<br>
-    }<br>
 
+- **请求uri**
+
+  /bulletinType/delete
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
+
+- **请求参数**
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | id            | String        |    否         | 新闻公告类型id | -             |     -         |
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | name          | String        |    是         | 类型          | -             |     -         |
+
+- **返回正确JSON示例**
+```
+  {
+     "code": 200,
+     "msg": "请求成功",
+     "data": null
+  }
+```
+- **返回错误JSON示例**
+```
+  {
+      "code": 201,
+      "msg": "请求失败"
+  }
+```
+- **请求成功，但是删除失败**
+```
+  {
+     "code": 200,
+     "msg": "该分类下有新闻公告内容，暂不可删除，如需删除，请先移走该分类下的内容",
+     "data": null
+  }
+```
 ### 更新新闻公告类型状态
-1. **请求uri**<br>
-/bulletinType/updateStatus
-2. **请求方式**<br>
-post
-3. **请求头**<br>
-"key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
-4. **请求参数**
-    <table>
-        <tr>
-            <td>参数名称</td> <td>类型</td> <td>必填</td> <td>描述</td> <td>默认值</td> <td>参考值</td>
-        </tr>
-        <tr>
-            <td>eid</td> <td>String</td> <td>是</td> <td>工作圈ID</td> <td>  -   </td> <td>236</td>
-        </tr>
-        <tr>
-            <td>id</td> <td>String</td> <td> 是 </td> <td>新闻公告类型ID</td> <td>  -   </td> <td></td>
-        </tr>
-         <tr>
-            <td>status</td> <td>String</td> <td>是</td> <td>0为禁用 1为启用</td> <td>  1 </td> <td>1</td>
-        </tr>
-    </table>
-5. **返回正确JSON示例**<br>
-    {<br>
-        &emsp;"code": 200,<br>
-        &emsp;"msg": "请求成功",<br>
-        &emsp;"data": null<br>
-    }<br>
-6. **返回错误JSON示例**<br>
-    {<br>
-       &emsp; "code": 201,<br>
-       &emsp; "msg": "请求失败"<br>
-    }<br>
+
+- **请求uri**
+
+  /bulletinType/updateStatus
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
+
+- **请求参数**
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | id            | String        |    否         | 新闻公告类型id | -             |     -         |
+  | eid           | String        |    是         | 工作圈id      | -             |      101      |
+  | status        | String        |    是         | 0为禁用 1为启用 | -            |     -        |
+
+- **返回正确JSON示例**
+```
+  {
+     "code": 200,
+     "msg": "请求成功",
+     "data": null
+  }
+```
+- **返回错误JSON示例**
+```
+  {
+      "code": 201,
+      "msg": "请求失败"
+  }
+```
