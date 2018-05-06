@@ -462,3 +462,48 @@ post
 
     - 创建日期
               2018年5月6日
+      {
+        "code": 200,
+        "msg": "请求成功",
+        "data": [
+                  {
+                    "id": "5aebc35329bbf612bc09bc6b",
+                    "title": "百度资讯发送消息",
+                    "subTitle": null,
+                    "author": "5ad5c3ec29bbf624b4784628",
+                    "status": "1",
+                    "expireDate": 1525399807,
+                    "url": null,
+                    "content": null,
+                    "pic": null,
+                    "articleUrl": null,
+                    "articleId": null,
+                    "attachments": null,
+                    "type":
+                           {
+                               "id": "9ad5c3ec29bbf624b4784628",
+                               "name": "员工发展",
+                               "insideShare": "1",
+                               "outsideShare": "0",
+                               "comment": null,
+                               "status": "1",
+                               "seq": null,
+                               "delete": "1",
+                               "creator": null,
+                               "creatorDate": null,
+                               "eid": "236"
+                           },
+                   "readnum": 0,
+                   "praisenum": 0,
+                   "creator": null,
+                   "publishDate": 1525399857,
+                   "eid": "236",
+                   "delete": "1",
+                   "top": "0",
+                   "orderType": "2",
+                   "bulletinType": "员工发展",
+                   "updateToporNodate": 1525399957,
+                   "bulletinMsgtype": "6"
+             }
+         ]
+     }
