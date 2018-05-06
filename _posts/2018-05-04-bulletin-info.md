@@ -33,7 +33,7 @@ tags:
   | bulletinMsgtype | String      |    是         | 公告内容类型   | -            |     -         |
   | bulletinType  | String        |    是         | 公告类型       | -            |     -         |
   | orderType     | String        |    是         | 显示顺序       | -            |     1         |
-  | status        | String        |    是         | 0为草稿 1为发布| -            |       -        |
+  | status        | String        |    是         | 0 草稿 1 发布| -            |       -        |
   | top           | String        |    是         | 0取消置顶 1置顶 |      -     |       -         |
   | publishDate   | Date          |    是         | 发布时间       | -             |     -        |
   | updateToporNodate | Date      |    是         | 更新置顶状态时间       | -      |      -       |
@@ -57,7 +57,7 @@ tags:
 ```
 - **备注**
 
-  参数：type 为新闻公告类型的json, 创建新闻公告详情时异步请求获取其对象具体uri 参考新闻公告类型接口文档。
+  参数：type  新闻公告类型的json, 创建新闻公告详情时异步请求获取其对象具体uri 参考新闻公告类型接口文档。
 
 ### 置顶或取消置顶(兼容批量)
 
@@ -158,7 +158,7 @@ tags:
   | pageSize      | int           |    是         | 页面大小       | -             |       -       |
   | title         | String        |    是         | 标题          | -             |       -       |
   | bulletinType  | String        |    是         | 公告类型       | -            |     -         |
-  | status        | String        |    是         | 0为草稿 1为发布| -            |       -        |
+  | status        | String        |    是         | 0 草稿 1 发布| -            |       -        |
 
 - **返回正确JSON示例**
 ```
