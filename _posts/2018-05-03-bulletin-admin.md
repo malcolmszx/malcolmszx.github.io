@@ -28,12 +28,11 @@ tags:
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | id            | String        |    否         | 管理员id      | -             |     -         |
-  | eid           | String        |    是         | 工作圈id      | -             |      101      |
-  | pubId         | String        |    是         | 公共号id | -  |             -                 |
-  | name          | String        |    是         | 管理员姓名    | -            |     -         |
-  | oid           | String        |    是         | 管理员oid     | -            |     -         |
-  | status        | String        |    是         | 0为删除 1为正常 | -            |     1        |
+  | eid           | String        |    是         | 工作圈id       | -             |      101      |
+  | pubId         | String        |    是         | 公共号id       | -             |     -         |
+  | name          | String        |    是         | 管理员姓名     | -            |     -         |
+  | oid           | String        |    是         | 管理员oid      | -            |     -         |
+  | status        | String        |    是         | 0 删除 1 正常 | -            |     1        |
   | creatorOId    | String        |    是         | 创建人oID      | -             |     -        |
   | creatorName   | String        |    是         | 创建人姓名     |        -      |     -        |
   | creatorDate   | Date          |    是         | 创建日期       | -             |     -        |
@@ -76,8 +75,8 @@ tags:
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | eid           | String        |    是         | 工作圈id      | -             |      101      |
-  | pubId         | String        |    是         | 公共号id | -  |- |
-  | status        | String        |    是         | 0为删除 1为正常 | -            |     1        |
+  | pubId         | String        |    是         | 公共号id      | -             |-              |
+  | status        | String        |    是         | 0 删除 1 正常 | -              |     1        |
 
 - **返回正确JSON示例**
   ```
@@ -176,7 +175,7 @@ tags:
   | eid           | String        |    是         | 工作圈id      | -             |      101      |
   | pubId         | String        |    是         | 公共号id | -  |         -                     |
   | name          | String        |    是         | 管理员姓名    | -            |     -         |
-  | status        | String        |    是         | 0为删除 1为正常 | -            |     1        |
+  | status        | String        |    是         | 0 删除 1 正常 | -            |     1        |
 
 - **返回正确JSON示例**
 ```
