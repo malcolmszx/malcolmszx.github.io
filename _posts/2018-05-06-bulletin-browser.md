@@ -12,11 +12,6 @@ tags:
 
 ### 添加阅读数
 
-1. **请求uri**
-
-> bulletinBrowserPraiser/create
-
-
 - **请求uri**
 
   bulletinBrowserPraiser/crate
