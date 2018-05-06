@@ -14,19 +14,19 @@ tags:
 
 1. **请求uri**
 
-bulletinBrowserPraiser/create
+> bulletinBrowserPraiser/create
 
 
 - **请求uri**
 
-bulletinBrowserPraiser/crate
+  bulletinBrowserPraiser/crate
 
 - **请求方式**
 
-post
+  post
 
 - **请求头**
 
-"key" : "Content-Type",  "value" : "application/json"
+  "key" : "Content-Type",  "value" : "application/json"
 
 - **请求参数**
