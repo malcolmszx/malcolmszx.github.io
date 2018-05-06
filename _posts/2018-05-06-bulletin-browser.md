@@ -12,15 +12,15 @@ tags:
 
 ### 添加阅读数
 
- - **请求uri**
+- **请求uri**
 
 bulletinBrowserPraiser/crate
 
- - **请求方式**
+- **请求方式**
 
 post
 
- - **请求头**
+- **请求头**
 
 "key" : "Content-Type",  "value" : "application/json"
 
