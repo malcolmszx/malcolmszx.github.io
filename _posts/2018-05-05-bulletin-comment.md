@@ -143,7 +143,7 @@ tags:
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | eid           | String        |    是         | 工作圈id       | -             |      101      |
   | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
-  | delete        | boolean       |    是         | ture 正常 false 删除 | -       |      101      |
+  | delete        | boolean       |    是         | true 正常 false 删除 | -       |      true     |
   | pageNumber    | int           |    是         | 页码           | -             |     -         |
   | pageSize      | int           |    是         | 页面大小       | -             |       -       |
 
