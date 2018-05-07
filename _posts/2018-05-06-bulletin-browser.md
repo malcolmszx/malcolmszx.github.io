@@ -22,7 +22,7 @@ tags:
 
 - **请求头**
 
-  "key" : "Content-Type",  "value" : "application/json"
+  "key" : "Content-Type",  "value" : "application/son"
 
 - **请求参数**
 
@@ -31,4 +31,4 @@ tags:
   | eid           | String        |    是         | 圈子id         | -             |      101      |
   | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
 
-- **
+- 
