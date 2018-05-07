@@ -14,7 +14,7 @@ tags:
 
 - **请求uri**
 
-  bulletinBrowserPraiser/crate
+  browsePraise/updateBrowse
 
 - **请求方式**
 
@@ -26,8 +26,9 @@ tags:
 
 - **请求参数**
 
-  | Tables        | Are           | Cool          | Adress        | Tel           | Age           |
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | col 3 is      | right-aligned |    $1600      | col 3 is      | right-aligned |     $1600     |
-  | col 2 is      | centered      |   col 2 is    | centered      | col 4 is      | centered      |
-  | zebra stripes | are neat      |   col 5 is    | centered      |       -       |      -        |    
+  | eid           | String        |    是         | 圈子id         | -             |      101      |
+  | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
+
+- **
