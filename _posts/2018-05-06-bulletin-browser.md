@@ -22,7 +22,7 @@ tags:
 
 - **请求头**
 
-  "key" : "Content-Type",  "value" : "application/son"
+  "key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
 
 - **请求参数**
 
@@ -31,4 +31,49 @@ tags:
   | eid           | String        |    是         | 圈子id         | -             |      101      |
   | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
 
-- 
+- **返回正确JSON示例**
+  ```
+    {
+        "code": 200,
+        "msg": "请求成功",
+        "data": null
+    }
+  ```
+
+### 添加/取消点赞数
+
+- **请求uri**
+
+  browsePraise/updatePraise
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "application/son"
+
+- **请求参数**
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | eid           | String        |    是         | 圈子id         | -             |      101      |
+  | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
+  | addordelete   | boolean       |    是         | true 点赞 false 取消 | -       |      101      |
+
+- **返回正确JSON示例**
+  ```
+    {
+        "code": 200,
+        "msg": "请求成功",
+        "data": null
+    }
+  ```
+- **返回错误JSON示例**  
+  ```
+    {
+        "code": 201,
+        "msg": "请求失败"
+    }
+  ```
