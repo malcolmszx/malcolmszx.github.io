@@ -53,7 +53,8 @@ tags:
 
 - **备注**
 
-  1、留言参数与回复留言参数不一致，回复留言添加最后三个变量：toUsername、toCommentId、toPersonId
+  1、留言参数与回复留言参数不一致，回复留言添加最后三个变量：toUsername、toCommentId
+    、toPersonId
 
 ### 点赞/取消新闻公告评论
 
@@ -162,3 +163,7 @@ tags:
         "data": null
     }
   ````
+
+  - **备注**
+
+  1、返回的json示例修改中。。。
