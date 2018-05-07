@@ -157,74 +157,74 @@ tags:
 
 - **返回正确JSON示例**
 ``` json
-  {
-    "code": 200,
-    "msg": "请求成功",
-    "data": {
-        "content": [
-            {
-                "id": "5aefedaa29bbf618b4373fe2",
-                "bulletinId": "8ad593ec29bbf624b4784648",
-                "username": "huangxiaoming",
-                "toUsername": null,
-                "content": "测试新闻公告留言",
-                "delete": false,
-                "eid": "236",
-                "personId": "6ad5c3ec29bbf624b4784628",
-                "photoUrl": null,
-                "createTime": 1525672959,
-                "deletePersonId": null,
-                "deleteTime": null,
-                "toCommentId": "",
-                "toPersonId": null,
-                "partnerType": false,
-                "praise": null,
-                "commentPraiseNum": 0,
-                "praiseList": [],
-                "replys": [
-                    {
-                        "id": "5aefedaa29bbf618b4373fe2",
-                        "bulletinId": "8ad593ec29bbf624b4784648",
-                        "username": "huangxiaoming",
-                        "toUsername": null,
-                        "content": "测试新闻公告留言",
-                        "delete": false,
-                        "eid": "236",
-                        "personId": "6ad5c3ec29bbf624b4784628",
-                        "photoUrl": null,
-                        "createTime": 1525672959,
-                        "deletePersonId": null,
-                        "deleteTime": null,
-                        "toCommentId": "",
-                        "toPersonId": null,
-                        "partnerType": false,
-                        "praise": null,
-                        "commentPraiseNum": 0,
-                        "praiseList": [],
-                        "replys": null
-                    }
-                ]
-            }
-        ],
-        "totalPages": 1,
-        "totalElements": 1,
-        "last": true,
-        "number": 0,
-        "size": 20,
-        "sort": [
-            {
-                "direction": "DESC",
-                "property": "createTime",
-                "ignoreCase": false,
-                "nullHandling": "NATIVE",
-                "ascending": false,
-                "descending": true
-            }
-        ],
-        "numberOfElements": 1,
-        "first": true
-    }
-}
+  {  
+    "code": 200,  
+    "msg": "请求成功",  
+    "data": {  
+        "content": [  
+            {  
+                "id": "5aefedaa29bbf618b4373fe2",  
+                "bulletinId": "8ad593ec29bbf624b4784648",  
+                "username": "huangxiaoming",  
+                "toUsername": null,  
+                "content": "测试新闻公告留言",  
+                "delete": false,  
+                "eid": "236",  
+                "personId": "6ad5c3ec29bbf624b4784628",  
+                "photoUrl": null,  
+                "createTime": 1525672959,  
+                "deletePersonId": null,  
+                "deleteTime": null,  
+                "toCommentId": "",  
+                "toPersonId": null,  
+                "partnerType": false,  
+                "praise": null,  
+                "commentPraiseNum": 0,  
+                "praiseList": [],  
+                "replys": [  
+                    {  
+                        "id": "5aefedaa29bbf618b4373fe2",  
+                        "bulletinId": "8ad593ec29bbf624b4784648",  
+                        "username": "huangxiaoming",  
+                        "toUsername": null,  
+                        "content": "测试新闻公告留言",  
+                        "delete": false,  
+                        "eid": "236",  
+                        "personId": "6ad5c3ec29bbf624b4784628",  
+                        "photoUrl": null,  
+                        "createTime": 1525672959,  
+                        "deletePersonId": null,  
+                        "deleteTime": null,  
+                        "toCommentId": "",  
+                        "toPersonId": null,  
+                        "partnerType": false,  
+                        "praise": null,  
+                        "commentPraiseNum": 0,  
+                        "praiseList": [],  
+                        "replys": null  
+                    }  
+                ]  
+            }  
+        ],  
+        "totalPages": 1,  
+        "totalElements": 1,  
+        "last": true,  
+        "number": 0,  
+        "size": 20,  
+        "sort": [  
+            {  
+                "direction": "DESC",  
+                "property": "createTime",  
+                "ignoreCase": false,  
+                "nullHandling": "NATIVE",  
+                "ascending": false,  
+                "descending": true  
+            }  
+        ],  
+        "numberOfElements": 1,  
+        "first": true  
+    }  
+}  
 ```
 
 - **备注**
