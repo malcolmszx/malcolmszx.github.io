@@ -156,6 +156,7 @@ tags:
   | pageSize      | int           |    是         | 页面大小       | -             |       -       |
 
 - **返回正确JSON示例**
+
   ```json
   {
     "code": 200,
@@ -225,7 +226,7 @@ tags:
         "first": true
     }
   }
-  ````
+  ```
 
 - **备注**
 
