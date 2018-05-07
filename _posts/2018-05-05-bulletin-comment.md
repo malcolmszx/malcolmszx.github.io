@@ -122,3 +122,36 @@ tags:
         "msg": "请求失败"
     }
   ```
+
+### 分页获取评论列表
+
+- **请求uri**
+
+  bulletinComment/queryList
+
+- **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type",  "value" : "application/x-www-form-urlencoded"
+
+- **请求参数**
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | eid           | String        |    是         | 工作圈id       | -             |      101      |
+  | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
+  | delete        | boolean       |    是         | ture 正常 false 删除 | -       |      101      |
+  | pageNumber    | int           |    是         | 页码           | -             |     -         |
+  | pageSize      | int           |    是         | 页面大小       | -             |       -       |
+
+- **返回正确JSON示例**
+  ```
+    {
+        "code": 200,
+        "msg": "请求成功",
+        "data": null
+    }
+  ````
