@@ -157,7 +157,7 @@ tags:
 
 - **返回正确JSON示例**
 
-  ```json
+```json
   {
     "code": 200,
     "msg": "请求成功",
@@ -225,8 +225,8 @@ tags:
         "numberOfElements": 1,
         "first": true
     }
-  }
-  ```
+}
+```
 
 - **备注**
 
