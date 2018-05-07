@@ -187,7 +187,7 @@ tags:
                         "bulletinId": "8ad593ec29bbf624b4784648",  
                         "username": "dengqw",  
                         "toUsername": "huangxiaoming",  
-                        "content": "测试新闻公告留言",  
+                        "content": "测试回复新闻公告留言",  
                         "delete": false,  
                         "eid": "236",  
                         "personId": "6ad5c3ec29bbf624b4784628",  
