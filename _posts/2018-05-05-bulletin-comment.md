@@ -31,6 +31,9 @@ tags:
   | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
   | content       | String        |    是         | 评论内容       | -            |     1        |
   | createTime    | String        |    是         | 评论时间       | -            |     1        |
+  | toUsername    | String        |    是         | 回复的人员姓名  | -  |- |
+  | toCommentId   | String        |    是         | 回复的评论id   | -            |     1        |
+  | toPersonId    | String        |    是         | 回复的人员oid  | -            |     1        |
 
 - **返回正确JSON示例**
   ```
@@ -47,6 +50,10 @@ tags:
         "msg": "请求失败"
     }
   ```
+
+- **备注**
+
+  1、留言参数与回复留言参数不一致，回复留言添加最后三个变量：toUsername、toCommentId、toPersonId
 
 ### 点赞/取消新闻公告评论
 
