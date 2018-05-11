@@ -81,10 +81,10 @@ tags:                               # 标签
   | id            | String        |    是         | 新闻公告类型id | -             |     -         |
   | name          | String        |    否         | 类型          | -             |     -         |
   | seq           | String        |    否         | 显示顺序      | -             |     -         |
-  | status        | String        |    否         | 0 禁用 1 启用 | -             |     1        |
-  | insideShare   | String        |    否         | 内部分享 0 不允许 1 允许 | -   |     1        |
-  | outsideShare  | String        |    否         | 外部分享 0 不允许 1 允许 | -   |     0        |
-  | comment       | String        |    否         | 评论 0 不允许 1 允许 | -       |     -        |
+  | status        | String        |    否         | 0 禁用 1 启用 | -             |     1         |
+  | insideShare   | String        |    否         | 内部分享 0 不允许 1 允许 | -   |     1         |
+  | outsideShare  | String        |    否         | 外部分享 0 不允许 1 允许 | -   |     0         |
+  | comment       | String        |    否         | 评论 0 不允许 1 允许 | -       |     -         |
 
 
 - **返回正确JSON示例**
