@@ -14,7 +14,7 @@ tags:
 
 - **请求uri**
 
-  bulletinAdmin/create
+  admin/create
 
 - **请求方式**
 
