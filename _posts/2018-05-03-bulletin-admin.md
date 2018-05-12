@@ -163,8 +163,8 @@ tags:
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | eid           | String        |    是         | 工作圈id      | -              |      101      |
-  | name          | String        |    是         | 管理员姓名    | -              |     -         |
+  | eid           | String        |    是         | 工作圈id      | -              |      236      |
+  | name          | String        |    是         | 管理员姓名    | -              |    李         |
 
 - **返回正确JSON示例**
 ```
@@ -172,19 +172,30 @@ tags:
     "code": 200,
     "msg": "请求成功",
     "data": [
-              {
-                  "eid": "236",
-                  "pubId": "XT-717062e8-8ee5-4873-a607-e8ccf4e8068f",
-                  "id": "5aea747329bbf602349dcf5d",
-                  "oid": "5ae92a4f29bbf603904abce9",
-                  "name": "黄小明",
-                  "creatorOId": "5ae92a4f29bbf603904abcf5",
-                  "creatorName": "张航",
-                  "creatorDate": 1525229960,
-                   "status": "0"
-             }
-           ]
-  }
+        {
+            "id": "5aea747329bbf602349dcf5e",
+            "eid": "236",
+            "pubId": "XT-717062e8-8ee5-4873-a607-e8ccf4e8068f",
+            "oid": "5be82a4f29bbf603904abce9",
+            "name": "李贵",
+            "creatorOId": "5ae92a4f29bbf603904abcf5",
+            "creatorName": "张航",
+            "creatorDate": 1625228960,
+            "status": "1"
+        },
+        {
+            "id": "5af6aa4929bbf605d482456f",
+            "eid": "236",
+            "pubId": "XT-717062e8-8ee5-4873-a607-e8ccf4e8068f",
+            "oid": "6ac82a4f29bbf603904abce8",
+            "name": "李大爷",
+            "creatorOId": "2cbe6aa9-f327-4d2c-b474-6c47ff34726e",
+            "creatorName": "系统管理员",
+            "creatorDate": 1526114887409,
+            "status": "1"
+        }
+    ]
+}
 ```
 - **备注**
 
