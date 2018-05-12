@@ -14,7 +14,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/create
+  /type/create
 
 - **请求方式**
 
@@ -64,7 +64,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/editor
+  /type/editor
 
 - **请求方式**
 
@@ -81,10 +81,10 @@ tags:                               # 标签
   | id            | String        |    是         | 新闻公告类型id | -             |     -         |
   | name          | String        |    否         | 类型          | -             |     -         |
   | seq           | String        |    否         | 显示顺序      | -             |     -         |
-  | status        | String        |    否         | 0 禁用 1 启用 | -             |     1        |
-  | insideShare   | String        |    否         | 内部分享 0 不允许 1 允许 | -   |     1        |
-  | outsideShare  | String        |    否         | 外部分享 0 不允许 1 允许 | -   |     0        |
-  | comment       | String        |    否         | 评论 0 不允许 1 允许 | -       |     -        |
+  | status        | String        |    否         | 0 禁用 1 启用 | -             |     1         |
+  | insideShare   | String        |    否         | 内部分享 0 不允许 1 允许 | -   |     1         |
+  | outsideShare  | String        |    否         | 外部分享 0 不允许 1 允许 | -   |     0         |
+  | comment       | String        |    否         | 评论 0 不允许 1 允许 | -       |     -         |
 
 
 - **返回正确JSON示例**
@@ -107,7 +107,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/getList
+  /type/getList
 
 - **请求方式**
 
@@ -148,7 +148,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/delete
+  /type/delete
 
 - **请求方式**
 
@@ -193,7 +193,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/updateStatus
+  /type/updateStatus
 
 - **请求方式**
 
@@ -225,6 +225,15 @@ tags:                               # 标签
       "msg": "请求失败"
   }
 ```
+
 ### 备注
 
+<<<<<<< HEAD
 有问题及时讨论，给你带来不便，抱歉！
+=======
+必填参数，端上严格按照规范。
+
+
+
+
+>>>>>>> aba7d1b6549c3d7f0f506d62542dc130cb8a1f0b

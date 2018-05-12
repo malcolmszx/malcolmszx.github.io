@@ -54,7 +54,7 @@ tags:
 
 - **请求uri**
 
-  bulletinAdmin/list
+  admin/list
 
 - **请求方式**
 
