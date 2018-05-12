@@ -28,14 +28,8 @@ tags:
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | eid           | String        |    是         | 工作圈id       | -             |      101      |
-  | pubId         | String        |    是         | 公共号id       | -             |     -         |
   | name          | String        |    是         | 管理员姓名     | -            |     -         |
   | oid           | String        |    是         | 管理员oid      | -            |     -         |
-  | status        | String        |    是         | 0 删除 1 正常 | -            |     1        |
-  | creatorOId    | String        |    是         | 创建人oID      | -             |     -        |
-  | creatorName   | String        |    是         | 创建人姓名     |        -      |     -        |
-  | creatorDate   | Date          |    是         | 创建日期       | -             |     -        |
 
 - **返回正确JSON示例**
 ```
@@ -60,7 +54,7 @@ tags:
 
 - **请求uri**
 
-  bulletinAdmin/list
+  admin/list
 
 - **请求方式**
 
