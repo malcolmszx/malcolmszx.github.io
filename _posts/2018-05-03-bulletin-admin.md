@@ -114,7 +114,7 @@ tags:
 
 - **请求uri**
 
-  bulletinAdmin/delete
+  admin/delete
 
 - **请求方式**
 
@@ -150,7 +150,7 @@ tags:
 
 - **请求uri**
 
-  bulletinAdmin/query
+  admin/query
 
 - **请求方式**
 
@@ -164,10 +164,8 @@ tags:
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | eid           | String        |    是         | 工作圈id      | -             |      101      |
-  | pubId         | String        |    是         | 公共号id | -  |         -                     |
-  | name          | String        |    是         | 管理员姓名    | -            |     -         |
-  | status        | String        |    是         | 0 删除 1 正常 | -            |     1        |
+  | eid           | String        |    是         | 工作圈id      | -              |      101      |
+  | name          | String        |    是         | 管理员姓名    | -              |     -         |
 
 - **返回正确JSON示例**
 ```
