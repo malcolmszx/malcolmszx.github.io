@@ -14,7 +14,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/create
+  /type/create
 
 - **请求方式**
 
@@ -64,7 +64,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/editor
+  /type/editor
 
 - **请求方式**
 
@@ -107,7 +107,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/getList
+  /type/getList
 
 - **请求方式**
 
@@ -148,7 +148,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/delete
+  /type/delete
 
 - **请求方式**
 
@@ -193,7 +193,7 @@ tags:                               # 标签
 
 - **请求uri**
 
-  /bulletinType/updateStatus
+  /type/updateStatus
 
 - **请求方式**
 
