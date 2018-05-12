@@ -124,24 +124,37 @@ tags:                               # 标签
 - **返回正确JSON示例**
 ```
   {
-    "code":200,
-    "msg":"请求成功",
-    "data":[
-             {
-                "id":"5ae92a4f29bbf603104abce9",
-                "name":"员工发展",
-                "insideShare":"1",
-                "outsideShare":"0",
-                "comment":"0",
-                "status":"1",
-                "seq":"2",
-                "delete":"1",
-                "creator":"5ae92a4f29bbf603904abce9",
-                "creatorDate":1525229096,
-                "eid":"236"
-           }
-         ]
-  }
+    "code": 200,
+    "msg": "请求成功",
+    "data": [
+        {
+            "id": "5af692ee29bbf633a03f6887",
+            "name": "职级申请",
+            "insideShare": "1",
+            "outsideShare": "0",
+            "comment": "0",
+            "status": "1",
+            "seq": "2",
+            "delete": "1",
+            "creator": "2cbe6aa9-f327-4d2c-b474-6c47ff34726e",
+            "creatorDate": 1526108908492,
+            "eid": "236"
+        },
+        {
+            "id": "5af693c029bbf633a03f6888",
+            "name": "职工蓝图",
+            "insideShare": "1",
+            "outsideShare": "0",
+            "comment": "0",
+            "status": "1",
+            "seq": "3",
+            "delete": "1",
+            "creator": "2cbe6aa9-f327-4d2c-b474-6c47ff34726e",
+            "creatorDate": 1526109120937,
+            "eid": "236"
+        }
+    ]
+}
 ```
 
 ### 删除新闻公告类型
