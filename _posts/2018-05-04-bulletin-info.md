@@ -13,7 +13,7 @@ tags:
 
 - **请求uri**
 
-  bulletinInfo/save
+  info/save
 
 - **请求方式**
 
@@ -27,16 +27,12 @@ tags:
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | eid           | String        |    是         | 工作圈id      | -             |      101      |
-  | author        | String        |    是         | 创建人的 oid  | -             |     -         |
   | title         | String        |    是         | 标题          | -             |       -       |
   | bulletinMsgtype | String      |    是         | 公告内容类型   | -            |     -         |
   | bulletinType  | String        |    是         | 公告类型       | -            |     -         |
   | orderType     | String        |    是         | 显示顺序       | -            |     1         |
   | status        | String        |    是         | 0 草稿 1 发布| -            |       -        |
   | top           | String        |    是         | 0取消置顶 1置顶 |      -     |       -         |
-  | publishDate   | Date          |    是         | 发布时间       | -             |     -        |
-  | updateToporNodate | Date      |    是         | 更新置顶状态时间       | -      |      -       |
   | expireDate    | Date          |    是         | 过期时间       | -             |     -        |
   | type          | Json          |    是         | 公告类型Json对象 | -            |     -       |
 
