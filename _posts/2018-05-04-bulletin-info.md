@@ -29,13 +29,13 @@ tags:
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | title         | String        |    是         | 标题          | -             |       -       |
   | articleUrl    | String        |    是         | 文章url       | -             |       -       |
-  | pic           | String        |    是         | 图片url       | -             |       -       |
+  | pic           | String        |    否         | 图片url       | -             |       -       |
   | bulletinMsgtype | String      |    是         | 公告内容类型   | -            |     -         |
   | bulletinType  | String        |    是         | 公告类型       | -            |     -         |
   | orderType     | String        |    是         | 显示顺序       | -            |     1         |
   | status        | String        |    是         | 0 草稿 1 发布  |       -      |       -       |
   | expireDate    | Date          |    否         | 过期时间        |     -        |       -      |
-  | attachments   | Json          |    否         | 附件Json对象   | -           |     -         |
+  | attachments   | Json          |    否         | 附件Json对象数组 | -           |     -         |
   | type          | Json          |    是         | 公告类型Json对象 | -           |     -         |
 
 - **返回正确JSON示例**
@@ -55,7 +55,8 @@ tags:
 ```
 - **备注**
 
-  参数：type  新闻公告类型的json, 创建新闻公告详情时异步请求获取其对象具体uri 参考新闻公告类型接口文档。
+  参数：type  新闻公告类型的json, 创建新闻公告详情时异步请求获取其对象具体uri 参考新闻公告类型接口文档，
+  参数：attachments  新闻公告附件, 类型为json数组。
 
 ### 置顶或取消置顶(兼容批量)
 
