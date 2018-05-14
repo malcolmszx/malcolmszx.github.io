@@ -13,7 +13,7 @@ tags:
 
 - **请求uri**
 
-  commment/save
+  comment/save
 
 - **请求方式**
 
@@ -50,7 +50,7 @@ tags:
 
 - **请求uri**
 
-  commment/reply
+  comment/reply
   
 - **请求方式**
 
