@@ -62,7 +62,7 @@ tags:
 
 - **请求uri**
 
-  bulletinInfo/updateToporNo
+  info/updateToporNo
 
 - **请求方式**
 
@@ -76,7 +76,7 @@ tags:
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | id            | String        |    是         | 新闻公告id     | -             |      101      |
+  | id            | String        |    是         | 新闻公告id     | -             |      -      |
   | top           | String        |    是         | 0取消置顶 1置顶 |      -     |       -         |
 
   **返回正确JSON示例**
@@ -96,13 +96,13 @@ tags:
  ```
 - **备注**
 
-    支持批量处理，后端接收Json数组
+   支持批量处理，后端接收Json对象数组
 
 ### 删除新闻公告详情(兼容批量删除)
 
 - **请求uri**
 
-  bulletinInfo/delete
+  info/delete
 
 - **请求方式**
 
@@ -116,7 +116,7 @@ tags:
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | ids           | String        |    是         | 新闻公告ids     | -             |      101      |
+  | ids           | String        |    是         | 新闻公告ids     | -            |      101      |
 
 - **返回正确JSON示例**
   ```
@@ -138,7 +138,7 @@ tags:
 
 - **请求uri**
 
-  bulletinInfo/getListPageByCondition/{eid}
+  info/getListPageByCondition/{eid}
 
 - **请求方式**
 
@@ -230,7 +230,7 @@ tags:
 
 - **请求uri**
 
-  bulletinInfo/getListByPage/{eid}?pageNumber=0&pageSize=20
+  info/getListByPage/{eid}?pageNumber=0&pageSize=20
 
 - **请求方式**
 
@@ -316,7 +316,7 @@ tags:
 
 - **请求uri**
 
-  bulletinInfo/app/getLatest
+  info/app/getLatest
 
 - **请求方式**
 
@@ -386,7 +386,7 @@ tags:
 
 - **请求uri**
 
-  bulletinInfo/app/type/getLatest
+  info/app/type/getLatest
 
 - **请求方式**
 
