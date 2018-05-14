@@ -9,7 +9,7 @@ catalog: true
 tags:
     - interface
 ---
-### 添加新闻公告评论
+### 添加新闻公告留言
 
 - **请求uri**
 
@@ -29,9 +29,6 @@ tags:
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
   | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
   | content       | String        |    是         | 评论内容       | -            |     1        |
-  | toUsername    | String        |    否         | 回复的人员姓名  | -  |- |
-  | toCommentId   | String        |    否         | 回复的评论id   | -            |     1        |
-  | toPersonId    | String        |    否         | 回复的人员oid  | -            |     1        |
 
 - **返回正确JSON示例**
   ```
@@ -49,9 +46,49 @@ tags:
     }
   ```
 
+### 回复新闻公告留言
+
+- **请求uri**
+
+  commment/reply
+
+ **请求方式**
+
+  post
+
+- **请求头**
+
+  "key" : "Content-Type", "value" : "application/json"
+
+- **请求参数**
+
+  | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
+  | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
+  | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
+  | content       | String        |    是         | 评论内容       | -            |     1        |
+  | toUsername    | String        |    是         | 回复的人员姓名  | -  |- |
+  | toCommentId   | String        |    是         | 回复的评论id   | -            |     1        |
+  | toPersonId    | String        |    是         | 回复的人员oid  | -            |     1        |
+
+- **返回正确JSON示例**
+  ```
+    {
+        "code": 200,
+        "msg": "请求成功"
+        "data": null
+    }
+  ```
+- **返回错误JSON示例**  
+  ```
+    {
+        "code": 205,
+        "msg": "参数不正确"
+    }
+  ```
+
 - **备注**
 
-  1、留言参数与回复留言参数不一致，回复留言添加最后三个变量：toUsername、toCommentId
+  1、留言参数与回复留言参数不一致，回复留言必填最后三个变量：toUsername、toCommentId
     、toPersonId
 
 ### 点赞/取消新闻公告评论
