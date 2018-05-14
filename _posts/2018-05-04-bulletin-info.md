@@ -35,7 +35,7 @@ tags:
   | orderType     | String        |    是         | 显示顺序       | -            |     1         |
   | status        | String        |    是         | 0 草稿 1 发布  |       -      |       -       |
   | top           | String        |    是         | 0取消置顶 1置顶 |      -       |       -       |
-  | expireDate    | Date          |    是         | 过期时间       |     -        |       -        |
+  | expireDate    | Date          |    否         | 过期时间        |     -        |       -        |
   | type          | Json          |    是         | 公告类型Json对象 | -           |     -         |
 
 - **返回正确JSON示例**
