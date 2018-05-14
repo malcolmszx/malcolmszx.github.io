@@ -13,7 +13,7 @@ tags:
 
 - **请求uri**
 
-  bulletinComment/save
+  commment/save
 
 - **请求方式**
 
@@ -21,25 +21,23 @@ tags:
 
 - **请求头**
 
-  "key" : "Content-Type",  "value" : "application/json"
+  "key" : "Content-Type", "value" : "application/json"
 
 - **请求参数**
 
   | 参数名称       | 类型          | 必填          | 描述           | 默认值        | 参考值         |
   | ------------- |:-------------:|:-------------:|:-------------:|:-------------:| -------------:|
-  | eid           | String        |    是         | 工作圈id       | -             |      101      |
   | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
   | content       | String        |    是         | 评论内容       | -            |     1        |
-  | createTime    | String        |    是         | 评论时间       | -            |     1        |
-  | toUsername    | String        |    是         | 回复的人员姓名  | -  |- |
-  | toCommentId   | String        |    是         | 回复的评论id   | -            |     1        |
-  | toPersonId    | String        |    是         | 回复的人员oid  | -            |     1        |
+  | toUsername    | String        |    否         | 回复的人员姓名  | -  |- |
+  | toCommentId   | String        |    否         | 回复的评论id   | -            |     1        |
+  | toPersonId    | String        |    否         | 回复的人员oid  | -            |     1        |
 
 - **返回正确JSON示例**
   ```
     {
         "code": 200,
-        "msg": "请求成功",
+        "msg": "请求成功"
         "data": null
     }
   ```
