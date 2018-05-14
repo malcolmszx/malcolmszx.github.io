@@ -45,6 +45,7 @@ tags:
         "msg": "请求失败"
     }
   ```
+
 ### 回复新闻公告留言
 
 - **请求uri**
@@ -66,8 +67,8 @@ tags:
   | bullentinId   | String        |    是         | 新闻公告id     | -  |- |
   | content       | String        |    是         | 评论内容       | -            |     -       |
   | toUsername    | String        |    是         | 回复的人员姓名  | -  |- |
-  | toCommentId   | String        |    是         | 回复的评论id   | -            |     1        |
-  | toPersonId    | String        |    是         | 回复的人员oid  | -            |     1        |
+  | toCommentId   | String        |    是         | 回复的评论id   | -            |     -        |
+  | toPersonId    | String        |    是         | 回复的人员oid  | -            |     -        |
 
 - **返回正确JSON示例**
   ```
@@ -89,11 +90,11 @@ tags:
   1、留言参数与回复留言参数不一致，回复留言必填最后三个变量：toUsername、toCommentId
     、toPersonId
 
-### 点赞/取消新闻公告评论
+### 点赞/取消新闻公告留言
 
 - **请求uri**
 
-  bulletinComment/updateParise
+  comment/updateParise
 
 - **请求方式**
 
@@ -126,11 +127,11 @@ tags:
     }
   ```
 
-### 删除新闻公告评论
+### 删除新闻公告留言
 
 - **请求uri**
 
-  bulletinComment/delete/{bulletinId}/{commentId}
+  comment/delete/{bulletinId}/{commentId}
 
 - **请求方式**
 
@@ -168,7 +169,7 @@ tags:
 
 - **请求uri**
 
-  bulletinComment/queryList
+  comment/queryList
 
 - **请求方式**
 
