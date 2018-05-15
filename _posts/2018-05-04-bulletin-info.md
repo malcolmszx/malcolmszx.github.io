@@ -35,7 +35,7 @@ tags:
   | bulletinType  | String        |    是         | 公告类型       | -            |     -         |
   | orderType     | String        |    是         | 显示顺序       | -            |     1         |
   | status        | String        |    是         | 0 草稿 1 发布  |       -      |       -       |
-  | expireDate    | Date          |    否         | 过期时间        |    -   |  2020-08-08 18:18:18|
+  | expireDate    | Date          |    否         | 过期时间        |        -      |  1526354989  |
   | attachments   | Json          |    否         | 附件Json对象数组 | -           |     -         |
   | type          | Json          |    是         | 公告类型Json对象 | -           |     -         |
 
