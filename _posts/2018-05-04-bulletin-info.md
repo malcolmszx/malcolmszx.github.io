@@ -87,7 +87,7 @@ tags:
 
 - **请求头**
 
-  "key" : "Content-Type",  "value" : "application/application/json"
+  "key" : "Content-Type",  "value" : "application/json"
 
 - **请求参数**
 
