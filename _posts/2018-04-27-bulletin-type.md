@@ -115,7 +115,7 @@ tags:                               # 标签
 
   get
 
-  http://localhost:8099/bulletin/bulletinType/getList/{eid}
+  http://localhost:8099/bulletin/type/getList/{eid}
 
 - **请求参数**
 
