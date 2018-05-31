@@ -54,7 +54,9 @@ innodb_buffer_pool_size:主要针对InnoDB表性能影响最大的一个参数�
 
 当我们操作一个 InnoDB 表的时候，返回的所有数据或者删除数据过程中用到的任何一个索引块，都会在这个内存区域中走一遭。
 
-可以通过 (Innodb_buffer_pool_read_requests – Innodb_buffer_pool_reads) / Innodb_buffer_pool_read_requests * 100% 计算缓存命中率，并根据命中率来调整 innodb_buffer_pool_size 参数大小进行优化。值可以用以下命令查得：show status like 'Innodb_buffer_pool_read%';
+可以通过 (Innodb_buffer_pool_read_requests – Innodb_buffer_pool_reads) / Innodb_buffer_pool_read_requests * 100% 计算缓存命中率，并根据命中率来调整 innodb_buffer_pool_size 参数大小进行优化。
+
+值可以用以下命令查得：show status like 'Innodb_buffer_pool_read%';
 
 比如查看当前系统中系统中
 
