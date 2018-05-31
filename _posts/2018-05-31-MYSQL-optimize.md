@@ -44,7 +44,7 @@ max_connections参数指的是MySql的最大连接数，如果服务器的并发
 
 从MySQL数据库IO相关参数(缓存参数)的角度可以通过哪些参数进行IO优化？
 
-#### innodb_buffer_pool_size 
+#### innodb_buffer_pool_size（全局参数） 
 
 innodb_buffer_pool_size:主要针对InnoDB表性能影响最大的一个参数。功能与Key_buffer_size一样。InnoDB占用的内存，除innodb_buffer_pool_size用于存储页面缓存数据外，另外正常情况下还有大约8%开销，主要用在每个缓存页帧的描述、adaptive hash等数据结构，如果不是安全关闭，启动时还要恢复的话，还要另开大约12%的内存用于恢复，两者相加就有差不多21%的开销。
  
@@ -110,7 +110,7 @@ Query Cache的使用需要多个参数配合，其中最为关键的是query_cac
 
 当然，这可以通过计算Query Cache的命中率(Qcache_hits/(Qcache_hits+Qcache_inserts)*100))来进行调整。
 
-query_cache_type可以设置为0(OFF)，1(ON)或者2(DEMOND)，分别表示完全不使用query cache，除显式要求不使用query cache(使用sql_no_cache)之外的所有的select都使用query cache，只有显示要求才使用query cache(使用sql_cache)。如果Qcache_lowmem_prunes的值非常大，则表明经常出现缓冲. 如果Qcache_hits的值也非常大，则表明查询缓冲使用非常频繁，此时需要增加缓冲大小；
+query_cache_type可以设置为0(OFF)，1(ON)或者2(DEMOND)，分别表示完全不使用query cache，除显式要求不使用query cache (使用sql_no_cache)之外的所有的select都使用query cache，只有显示要求才使用query cache(使用sql_cache)。如果Qcache_lowmem_prunes的值非常大，则表明经常出现缓冲. 如果Qcache_hits的值也非常大，则表明查询缓冲使用非常频繁，此时需要增加缓冲大小；
 
 根据命中率(Qcache_hits/(Qcache_hits+Qcache_inserts)*100))进行调整，一般不建议太大，256MB可能已经差不多了，大型的配置型静态数据可适当调大.
 
@@ -123,3 +123,86 @@ query_cache_type可以设置为0(OFF)，1(ON)或者2(DEMOND)，分别表示完�
 
 命中率98.17% = 1892463 / (1892463 +35627 ) * 100
 
+### innodb_buffer_pool_size（局部参数） 
+
+#### read_buffer_size
+
+read_buffer_size 是MySql读入缓冲区大小。对表进行顺序扫描的请求将分配一个读入缓冲区，MySql会为它分配一段内存缓冲区。read_buffer_size变量控制这一缓冲区的大小。如果对表的顺序扫描请求非常频繁，并且你认为频繁扫描进行得太慢，可以通过增加该变量值以及内存缓冲区大小提高其性能。
+
+#### sort_buffer_size
+
+sort_buffer_size是MySql执行排序使用的缓冲大小。如果想要增加ORDER BY的速度，首先看是否可以让MySQL使用索引而不是额外的排序阶段。如果不能，可以尝试增加sort_buffer_size变量的大小。
+
+####  read_rnd_buffer_size
+
+read_rnd_buffer_size 是MySql的随机读缓冲区大小。当按任意顺序读取行时(例如，按照排序顺序)，将分配一个随机读缓存区。进行排序查询时，MySql会首先扫描一遍该缓冲，以避免磁盘搜索，提高查询速度，如果需要排序大量数据，可适当调高该值。但MySql会为每个客户连接发放该缓冲空间，所以应尽量适当设置该值，以避免内存开销过大。
+
+#### tmp_table_size
+
+tmp_table_size是MySql的heap （堆积）表缓冲大小。所有联合在一个DML指令内完成，并且大多数联合甚至可以不用临时表即可以完成。大多数临时表是基于内存的(HEAP)表。具有大的记录长度的临时表 (所有列的长度的和)或包含BLOB列的表存储在硬盘上。如果某个内部heap（堆积）表大小超过tmp_table_size，MySQL可以根据需要自动将内存中的heap表改为基于硬盘的MyISAM表。还可以通过设置tmp_table_size选项来增加临时表的大小。也就是说，如果调高该值，MySql同时将增加heap表的大小，可达到提高联接查询速度的效果。
+
+#### record_buffer
+
+record_buffer每个进行一个顺序扫描的线程为其扫描的每张表分配这个大小的一个缓冲区。如果你做很多顺序扫描，你可能想要增加该值。默认数值是131072(128K)
+
+### 其他
+
+#### thread_cache_size 
+
+默认的thread_cache_size=8，但是看到好多配置的样例里的值一般是32，64，甚至是128，感觉这个参数对优化应该有帮助，于是查了下：
+根据调查发现以上服务器线程缓存thread_cache_size没有进行设置，或者设置过小,这个值表示可以重新利用保存在缓存中线程的数量,当断开连接时如果缓存中还有空间,那么客户端的线程将被放到缓存中,如果线程重新被请求，那么请求将从缓存中读取,如果缓存中是空的或者是新的请求，那么这个线程将被重新创建,如果有很多新的线程，增加这个值可以改善系统性能.通过比较 Connections 和 Threads_created 状态的变量，可以看到这个变量的作用。(–>表示要调整的值)   根据物理内存设置规则如下：
+1G —> 8
+2G —> 16
+3G —> 32     >3G —> 64
+
+  mysql> show status like 'thread%';
+| Variable_name   |  Value  |
+| ----------------|--- ----:|
+| Threads_cached    | 0     |  <—当前被缓存的空闲线程的数量
+| Threads_connected | 1     |  <—正在使用（处于连接状态）的线程
+| Threads_created   | 1498  |  <—服务启动以来，创建了多少个线程
+| Threads_running   | 1     |  <—正在忙的线程（正在查询数据，传输数据等等操作）
++——————-+——-+
+
+查看开机起来数据库被连接了多少次？
+
+mysql> show status like '%connection%';
+| Variable_name   |  Value  |
+| ----------------|--- ----:|
+| Connections          | 1504  |          –>服务启动以来，历史连接数
+| Max_used_connections | 2     |
++———————-+——-+
+
+通过连接线程池的命中率来判断设置值是否合适？命中率超过90%以上,设定合理。
+
+ (Connections -  Threads_created) / Connections * 100 %
+
+#### table_cache
+
+table_cache指定表高速缓存的大小。每当MySQL访问一个表时，如果在表缓冲区中还有空间，该表就被打开并放入其中，这样可以更快地访问表内容。通过检查峰值时间的状态值Open_tables和Opened_tables，可以决定是否需要增加table_cache的值。如果你发现open_tables等于table_cache，并且opened_tables在不断增长，那么你就需要增加table_cache的值了（上述状态值可以使用SHOW STATUS LIKE ‘Open%tables’获得）。注意，不能盲目地把table_cache设置成很大的值。如果设置得太高，可能会造成文件描述符不足，从而造成性能不稳定或者连接失败。
+
+SHOW STATUS LIKE 'Open%tables';
+
+| Variable_name   |  Value  |
+| ----------------|--- ----:|
+| Open_tables   | 356   |
+| Opened_tables | 0     |
+
+2 rows in set (0.00 sec)
+
+open_tables表示当前打开的表缓存数，如果执行flush tables操作，则此系统会关闭一些当前没有使用的表缓存而使得此状态值减小；
+
+opend_tables表示曾经打开的表缓存数，会一直进行累加，如果执行flush tables操作，值不会减小。
+
+在mysql默认安装情况下，table_cache的值在2G内存以下的机器中的值默认时256到512，如果机器有4G内存,则默认这个值 是2048，但这决意味着机器内存越大，这个值应该越大，因为table_cache加大后，使得mysql对SQL响应的速度更快了，不可避免的会产生 更多的死锁（dead lock），这样反而使得数据库整个一套操作慢了下来，严重影响性能。所以平时维护中还是要根据库的实际情况去作出判断，找到最适合你维护的库的 table_cache值。
+
+由于MySQL是多线程的机制,为了提高性能,每个线程都是独自打开自己需要的表的文件描 述符,而不是通过共享已经打开的.针对不同存储引擎处理的方法当然也不一样
+
+在myisam表引擎中,数据文件的描述符 (descriptor)是不共享的,但是索引文件的描述符却是所有线程共享的.Innodb中和使用表空间类型有关,假如是共享表空间那么实际就一个数 据文件,当然占用的数据文件描述符就会比独立表空间少.
+mysql手册上给的建议大小 是:table_cache=max_connections*n
+
+n表示查询语句中最大表数, 还需要为临时表和文件保留一些额外的文件描述符。
+
+这个数据遭到很多质疑,table_cache够用就好,检查 Opened_tables值,如果这个值很大,或增长很快那么你就得考虑加大table_cache了.
+
+table_cache：所有线程打开的表的数目。增大该值可以增加mysqld需要的文件描述符的数量。默认值是64.
