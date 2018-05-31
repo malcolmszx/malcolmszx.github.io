@@ -25,4 +25,3 @@ thread_concurrency设为CPU核数的2倍，而不是cpu个数的两倍。假设�
 
 命令：show variables like 'thread_concurrency';
 
-
