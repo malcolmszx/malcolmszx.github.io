@@ -41,3 +41,23 @@ max_connections参数指的是MySql的最大连接数，如果服务器的并发
 因此，要优化数据库，首先第一步需要优化的就是IO，尽可能将磁盘IO转化为内存IO。
 
 从MySQL数据库IO相关参数(缓存参数)的角度可以通过哪些参数进行IO优化？
+
+#### innodb_buffer_pool_size 
+
+ innodb_buffer_pool_size:主要针对InnoDB表性能影响最大的一个参数。功能与Key_buffer_size一样。InnoDB占用的内存，除innodb_buffer_pool_size用于存储页面缓存数据外，另外正常情况下还有大约8%的开销，主要用在每个缓存页帧的描述、adaptive hash等数据结构，如果不是安全关闭，启动时还要恢复的话，还要另开大约12%的内存用于恢复，两者相加就有差不多21%的开销。假设：12G的innodb_buffer_pool_size，最多的时候InnoDB就可能占用到14.5G的内存。若系统只有16G，而且只运行MySQL，且MySQL只用InnoDB，
+
+那么为MySQL开12G，是最大限度地利用内存了。
+
+另外InnoDB和 MyISAM 存储引擎不同， MyISAM 的 key_buffer_size 只能缓存索引键，而 innodb_buffer_pool_size 却可以缓存数据块和索引键。适当的增加这个参数的大小，可以有效的减少 InnoDB 类型的表的磁盘 I/O 。
+
+当我们操作一个 InnoDB 表的时候，返回的所有数据或者去数据过程中用到的任何一个索引块，都会在这个内存区域中走一遭。
+
+可以通过 (Innodb_buffer_pool_read_requests – Innodb_buffer_pool_reads) / Innodb_buffer_pool_read_requests * 100% 计算缓存命中率，并根据命中率来调整 innodb_buffer_pool_size 参数大小进行优化。值可以用以下命令查得：show status like 'Innodb_buffer_pool_read%';
+
+比如查看当前系统中系统中
+
++---------------------------------------+---------+
+| Innodb_buffer_pool_read_requests      | 1283826 |
+| Innodb_buffer_pool_reads              | 519     |
+
+其命中率99.959%=（1283826-519）/1283826*100%  命中率越高越好。
