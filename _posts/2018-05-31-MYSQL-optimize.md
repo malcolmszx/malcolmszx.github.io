@@ -19,12 +19,9 @@ tags:
 
 1. **thread_concurrency**
 
-thread_concurrency的值对mysql的性能影响很大，尤其在多个cpu(多核)的情况下，设置thread_concurrency值，会导致mysql不能充分利用系统资源（多cpu多核）。如果设置该值呢？一般情况下，
-
-thread_concurrency设为CPU核数的2倍，而不是cpu个数的两倍。假设一台主机有4个CPU，每个CPU为8核，按照上面的计算规则，thread_concurrencythread_concurrency的值为：4*8*2=64查看系统当前
-
-thread_concurrency默认配置命令：show variables like 'thread_concurrency';
-
-
-
+  thread_concurrency的值对mysql的性能影响很大，尤其在多个cpu(多核)的情况下，设置thread_concurrency值，会导致mysql不能充分利用系统资源（多cpu多核）。如果设置该值呢？一般情况下，
+  
+  thread_concurrency设为CPU核数的2倍，而不是cpu个数的两倍。假设一台主机有4个CPU，每个CPU为8核，按照上面的计算规则，thread_concurrencythread_concurrency的值为：4*8*2=64查看系统当前
+  
+  thread_concurrency默认配置命令：show variables like 'thread_concurrency';
 
