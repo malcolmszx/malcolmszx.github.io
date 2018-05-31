@@ -17,7 +17,7 @@ tags:
 
 ### MySQL非缓存参数变量介绍及修改
 
-1. **thread_concurrency**
+#### thread_concurrency
 
 thread_concurrency的值对mysql的性能影响很大，尤其在多个cpu(多核)的情况下，设置thread_concurrency值，会导致mysql不能充分利用系统资源（多cpu多核）。如果设置该值呢？一般情况下
 
