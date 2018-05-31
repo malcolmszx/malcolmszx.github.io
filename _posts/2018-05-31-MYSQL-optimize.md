@@ -36,7 +36,7 @@ max_connections参数指的是MySql的最大连接数，如果服务器的并发
 
 查看mysql 当前系统默认back_log值，命令：show variables like 'back_log';
 
-### MySQL缓存变量介绍及修改
+### MySQL缓存变量介绍及修改（全局参数）
 
 数据库属于IO密集型的应用程序，职责是数据的管理及存储。从内存中读取一个数据库的时间是微秒级别，而从一块普通硬盘上读取一个IO是在毫秒级别，二者相差3个数量级。
 
@@ -44,7 +44,7 @@ max_connections参数指的是MySql的最大连接数，如果服务器的并发
 
 从MySQL数据库IO相关参数(缓存参数)的角度可以通过哪些参数进行IO优化？
 
-#### innodb_buffer_pool_size（全局参数） 
+#### innodb_buffer_pool_size 
 
 innodb_buffer_pool_size:主要针对InnoDB表性能影响最大的一个参数。功能与Key_buffer_size一样。InnoDB占用的内存，除innodb_buffer_pool_size用于存储页面缓存数据外，另外正常情况下还有大约8%开销，主要用在每个缓存页帧的描述、adaptive hash等数据结构，如果不是安全关闭，启动时还要恢复的话，还要另开大约12%的内存用于恢复，两者相加就有差不多21%的开销。
  
@@ -123,7 +123,7 @@ query_cache_type可以设置为0(OFF)，1(ON)或者2(DEMOND)，分别表示完�
 
 命中率98.17% = 1892463 / (1892463 +35627 ) * 100
 
-### innodb_buffer_pool_size（局部参数） 
+### MySQL缓存变量介绍及修改（局部参数） 
 
 #### read_buffer_size
 
