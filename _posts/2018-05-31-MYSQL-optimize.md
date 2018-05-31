@@ -33,3 +33,11 @@ max_connections参数指的是MySql的最大连接数，如果服务器的并发
 查看当前系统的TCP/IP连接的侦听队列的大小命令：cat /proc/sys/net/ipv4/tcp_max_syn_backlog目前系统为1024。对于Linux系统推荐设置为小于512的整数，修改系统内核参数。http://www.51testing.com/html/64/n-810764.html
 
 查看mysql 当前系统默认back_log值，命令：show variables like 'back_log';
+
+### MySQL缓存变量介绍及修改
+
+数据库属于IO密集型的应用程序，职责是数据的管理及存储。从内存中读取一个数据库的时间是微秒级别，而从一块普通硬盘上读取一个IO是在毫秒级别，二者相差3个数量级。
+
+因此，要优化数据库，首先第一步需要优化的就是IO，尽可能将磁盘IO转化为内存IO。
+
+从MySQL数据库IO相关参数(缓存参数)的角度可以通过哪些参数进行IO优化？
