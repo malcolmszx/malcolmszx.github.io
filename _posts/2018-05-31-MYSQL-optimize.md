@@ -30,7 +30,9 @@ max_connections参数指的是MySql的最大连接数，如果服务器的并发
 
 如果MySql的连接数据达到max_connections时，新来的请求将会被存在堆栈中，以等待某一连接释放资源，该堆栈的数量即back_log，如果等待连接的数量超过back_log，将不被授予连接资源。将会报：unauthenticated user xxx.xxx.xxx.xxx  NULL  Connect  NULL  login  NULL ，等待连接进程时，back_log值不能超过TCP/IP连接的侦听队列的大小，若超过则无效。
 
-查看当前系统的TCP/IP连接的侦听队列的大小命令：cat /proc/sys/net/ipv4/tcp_max_syn_backlog目前系统为1024。对于Linux系统推荐设置为小于512的整数，修改系统内核参数。http://www.51testing.com/html/64/n-810764.html
+查看当前系统的TCP/IP连接的侦听队列的大小命令：cat /proc/sys/net/ipv4/tcp_max_syn_backlog目前系统为1024。对于Linux系统推荐设置为小于512的整数，修改系统内核参数。
+
+- [](http://www.51testing.com/html/64/n-810764.html)
 
 查看mysql 当前系统默认back_log值，命令：show variables like 'back_log';
 
@@ -48,9 +50,9 @@ innodb_buffer_pool_size:主要针对InnoDB表性能影响最大的一个参数�
  
 假设：12G的innodb_buffer_pool_size，最多的时候InnoDB就可能占用到14.5G的内存。若系统只有16G，而且只运行MySQL，且MySQL只用InnoDB，那么为MySQL开12G，是最大限度地利用内存了。
 
-另外InnoDB和 MyISAM 存储引擎不同， MyISAM 的key_buffer_size 只能缓存索引键，而innodb_buffer_pool_size 却可以缓存数据块和索引键。适当的增加这个参数的大小，可以有效的减少 InnoDB 类型的表的磁盘 I/O 。
+另外InnoDB 和MyISAM 存储引擎不同， MyISAM 的key_buffer_size 只能缓存索引键，而innodb_buffer_pool_size 却可以缓存数据块和索引键。适当的增加这个参数的大小，可以有效的减少 InnoDB 类型的表的磁盘 I/O 。
 
-当我们操作一个 InnoDB 表的时候，返回的所有数据或者去数据过程中用到的任何一个索引块，都会在这个内存区域中走一遭。
+当我们操作一个 InnoDB 表的时候，返回的所有数据或者删除数据过程中用到的任何一个索引块，都会在这个内存区域中走一遭。
 
 可以通过 (Innodb_buffer_pool_read_requests – Innodb_buffer_pool_reads) / Innodb_buffer_pool_read_requests * 100% 计算缓存命中率，并根据命中率来调整 innodb_buffer_pool_size 参数大小进行优化。值可以用以下命令查得：show status like 'Innodb_buffer_pool_read%';
 
@@ -61,3 +63,32 @@ innodb_buffer_pool_size:主要针对InnoDB表性能影响最大的一个参数�
 | Innodb_buffer_pool_reads              | 519     |
 
 其命中率99.959%=（1283826-519）/1283826*100%  命中率越高越好。
+
+#### key_buffer_size 
+
+key_buffer_size：索引块的缓冲区大小，增加它可得到更好处理的索引。对 MyISAM表性能影响最大的一个参数。如果你使它太大，系统将开始换页并且真的变慢了。严格说是它决定了数据库索引处理的速度，尤其是索引读的速度。对于内存在4GB左右的服务器该参数可设置为256M或384M。
+
+怎么才能知道key_buffer_size的设置是否合理呢？
+
+一般可以检查状态值Key_read_requests和Key_reads，比例key_reads / key_read_requests应该尽可能的低，比如1:100，1:1000 ，1:10000。
+
+其值可以用以下命令查得：show status like 'key_read%';
+
+比如查看系统当前key_read和key_read_request值为：
+
++-------------------+-------+
+| Variable_name     | Value |
++-------------------+-------+
+| Key_read_requests | 28535 |
+| Key_reads         | 269   |
++-------------------+-------+
+
+可知道有28535个请求，有269个请求在内存中没有找到直接从硬盘读取索引。
+
+未命中缓存的概率为：0.94%=269/28535*100%.  一般未命中概率在0.1之下比较好。目前已远远大于0.1，证明效果不好。若命中率在0.01以下，则建议适当的修改key_buffer_size值。
+
+- [InnoDB与MyISAM的六大区别](http://dbahacker.com/mysql/innodb-myisam-compare)
+
+- [查看存储引擎介绍](http://kb.cnblogs.com/page/99810)
+
+MyISAM、InnoDB、MyISAM Merge引擎、InnoDB、memory(heap)、archive
