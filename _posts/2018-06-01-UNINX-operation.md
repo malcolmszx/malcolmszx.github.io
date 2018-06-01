@@ -49,7 +49,7 @@ tags:
 
 ## 磁盘和分区
 
-- mount | column 查看挂接的分区状态
+- mount / column 查看挂接的分区状态
 
 - fdisk l 查看所有分区 
 
@@ -93,10 +93,10 @@ tags:
 
 - chkconfig list 列出所有系统服务
 
-- chkconfig list | grep on 列出所有启动的系统服务
+- chkconfig list / grep on 列出所有启动的系统服务
 
 ## 程序
 
 - rpm -qa 查看所有安装的软件包
 
- 
+
