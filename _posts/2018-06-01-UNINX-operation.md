@@ -31,3 +31,20 @@ tags:
 
 - env 查看环境变量
 
+## 资源
+
+- free -m 查看内存使用量和交换区使用量
+
+- df -h 查看各分区使用情况
+
+- du -sh （目录名） 查看指定目录的大小
+
+- grep MenTotal /proc/meminfo 查看内存总量
+
+- grep MenTotal /proc/meminfo 查看空闲内存量
+
+- uptime 查看系统运行时间、用户数、负载
+
+- cat/proc/loadavg 查看系统平均负载
+
+
