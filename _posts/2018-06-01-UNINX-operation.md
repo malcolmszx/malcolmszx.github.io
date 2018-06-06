@@ -75,6 +75,10 @@ tags:
 
 - top 实时显示进程状态
 
+- ps auxw --sort = %cpu 查看进程cpu占用率排序
+
+- ps auxw --sort = %MEM 查看进程内存占用率排序 
+
 ## 用户
 
 - w 查看活动用户
