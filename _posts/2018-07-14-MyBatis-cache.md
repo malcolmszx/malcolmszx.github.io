@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:  如何保证API调用时数据的安全性
-subtitle:  请求和响应加解密
-date:       2018-06-10
+title:  如何避免MyBatis缓存带来的脏数据
+subtitle:  MyBatis缓存机制
+date:       2018-07-14
 author:     BY Malcolmszx@gmail.com
 header-img: img/post-bg-cook.jpg
 catalog: true
