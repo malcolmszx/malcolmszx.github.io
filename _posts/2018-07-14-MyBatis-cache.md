@@ -28,7 +28,7 @@ MyBatis开启一次和数据库的会话，MyBatis会创建出一个SqlSession�
 
 如下图所示，MyBatis会在一次会话的表示----一个SqlSession对象中创建一个本地缓存(local cache)，对于每一次查询，都会尝试根据查询的条件去本地缓存中查找是否在缓存中，如果在缓存中，就直接从缓存中取出，然后返回给用户；否则，从数据库读取数据，将查询结果存入缓存并返回给用户。
 
-![](https://img-blog.csdn.net/20141121213425390)
+![](http://misc.linkedkeeper.com/misc/img/blog/201709/linkedkeeper0_38e2dcb4-04af-4ffe-89ed-4fef7ad99424.jpg)
 
 #### 一级缓存配置 
 
@@ -36,7 +36,9 @@ MyBatis开启一次和数据库的会话，MyBatis会创建出一个SqlSession�
 
 ``` java 
 
-<setting name="localCacheScope" value="STATEMENT"/>
+<settings>
+    <setting name="localCacheScope" value="STATEMENT"/>
+</settings>
 
 ``` 
 
@@ -49,3 +51,16 @@ MyBatis开启一次和数据库的会话，MyBatis会创建出一个SqlSession�
 - MyBatis同一个SqlSession中的增、删、改都会清空一级缓存。
 - MyBatis一级缓存内部设计简单，只是一个没有容量限定的HashMap，在缓存的功能性上有所欠缺。
 - MyBatis的一级缓存最大范围是SqlSession内部，有多个SqlSession或者分布式的环境下，数据库写操作会引起脏数据，建议设定缓存级别为Statement。
+
+### 二级缓存
+
+#### 二级缓存概要
+
+在上文中提到的一级缓存中，其最大的共享范围就是一个SqlSession内部，如果多个SqlSession之间需要共享缓存，则需要使用到二级缓存。开启二级缓存后，会使用CachingExecutor装饰Executor，进入一级缓存的查询流程前，先在CachingExecutor进行二级缓存的查询。二级缓存开启后，同一个namespace下的所有操作语句，都影响着同一个Cache，即二级缓存被多个SqlSession共享，是一个全局的变量。当开启缓存后，数据的查询执行的流程就是 二级缓存 -> 一级缓存 -> 数据库。
+
+#### 二级缓存配置 
+
+<settings>
+  <setting name="cacheEnabled" value="false" />
+</settings>
+
