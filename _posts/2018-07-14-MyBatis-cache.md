@@ -32,4 +32,20 @@ MyBatis开启一次和数据库的会话，MyBatis会创建出一个SqlSession�
 
 #### 一级缓存配置 
 
+一级缓存的范围有SESSION和STATEMENT两种，默认是SESSION，如果不想使用一级缓存，可以把一级缓存的范围指定为STATEMENT，这样每次执行完一个Mapper中的语句后都会将一级缓存清除。 如果需要更改一级缓存的范围，可以在Mybatis的配置文件中，在下通过localCacheScope指定。
 
+``` java 
+
+<setting name="localCacheScope" value="STATEMENT"/>
+
+``` 
+
+当Mybatis整合Spring后，直接通过Spring注入Mapper的形式，如果不是在同一个事务中每个Mapper的每次查询操作都对应一个全新的SqlSession实例，这个时候就不会有一级缓存的命中，但是在同一个事务中时共用的是同一个SqlSession。 
+如有需要可以启用二级缓存。
+
+#### 注意
+
+- MyBatis一级缓存的生命周期和SqlSession一致。
+- MyBatis同一个SqlSession中的增、删、改都会清空一级缓存。
+- MyBatis一级缓存内部设计简单，只是一个没有容量限定的HashMap，在缓存的功能性上有所欠缺。
+- MyBatis的一级缓存最大范围是SqlSession内部，有多个SqlSession或者分布式的环境下，数据库写操作会引起脏数据，建议设定缓存级别为Statement。
