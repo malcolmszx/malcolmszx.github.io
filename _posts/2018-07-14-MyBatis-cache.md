@@ -35,11 +35,9 @@ MyBatis开启一次和数据库的会话，MyBatis会创建出一个SqlSession�
 一级缓存的范围有SESSION和STATEMENT两种，默认是SESSION，如果不想使用一级缓存，可以把一级缓存的范围指定为STATEMENT，这样每次执行完一个Mapper中的语句后都会将一级缓存清除。 如果需要更改一级缓存的范围，可以在Mybatis的配置文件中，在下通过localCacheScope指定。
 
 ``` java 
-
 <settings>
     <setting name="localCacheScope" value="STATEMENT"/>
 </settings>
-
 ``` 
 
 当Mybatis整合Spring后，直接通过Spring注入Mapper的形式，如果不是在同一个事务中每个Mapper的每次查询操作都对应一个全新的SqlSession实例，这个时候就不会有一级缓存的命中，但是在同一个事务中时共用的是同一个SqlSession。 
@@ -59,8 +57,23 @@ MyBatis开启一次和数据库的会话，MyBatis会创建出一个SqlSession�
 在上文中提到的一级缓存中，其最大的共享范围就是一个SqlSession内部，如果多个SqlSession之间需要共享缓存，则需要使用到二级缓存。开启二级缓存后，会使用CachingExecutor装饰Executor，进入一级缓存的查询流程前，先在CachingExecutor进行二级缓存的查询。二级缓存开启后，同一个namespace下的所有操作语句，都影响着同一个Cache，即二级缓存被多个SqlSession共享，是一个全局的变量。当开启缓存后，数据的查询执行的流程就是 二级缓存 -> 一级缓存 -> 数据库。
 
 #### 二级缓存配置 
-
+``` java
 <settings>
   <setting name="cacheEnabled" value="false" />
 </settings>
+```
 
+要使用二级缓存除了上面一个配置外，我们还需要在我们每个DAO对应的Mapper.xml文件中定义需要使用的cache
+
+``` java 
+<mapper namespace="...UserMapper">
+    <cache/><!-- 加上该句即可，使用默认配置、还有另外一种方式，在后面写出 -->
+    ...
+</mapper>
+```
+
+#### 注意
+
+- MyBatis的二级缓存相对于一级缓存来说，实现了SqlSession之间缓存数据的共享，同时粒度更加的细，能够到namespace级别，通过Cache接口实现类不同的组合，对Cache的可控性也更强。
+- MyBatis在多表查询时，极大可能会出现脏数据，有设计上的缺陷，安全使用二级缓存的条件比较苛刻。
+- 在分布式环境下，由于默认的MyBatis Cache实现都是基于本地的，分布式环境下必然会出现读取到脏数据，需要使用集中式缓存将MyBatis的Cache接口实现，有一定的开发成本，直接使用Redis,Memcached等分布式缓存可能成本更低，安全性也更高。
