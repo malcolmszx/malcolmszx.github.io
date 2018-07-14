@@ -7,7 +7,7 @@ author:     BY Malcolmszx@gmail.com
 header-img: img/post-bg-cook.jpg
 catalog: true
 tags:
-    - API
+    - MyBatis
     - Spring Boot
 ---
 
