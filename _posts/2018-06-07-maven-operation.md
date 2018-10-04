@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:  maven 项目管理
+title:  Maven Item Operation 
 subtitle:  常用命令
 date:       2018-06-07
 author:     BY Malcolmszx@gmail.com
