@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Git Operatins 
+title:      Git Operation 命令指南
 subtitle:   不适合阅读的整理的一些个人常用的 Git 指令
 date:       2017-02-15
 author:     BY
@@ -293,8 +293,10 @@ $ export LESSCHARSET=utf-8
 
 	# 生成一个可供发布的压缩包
 	$ git archives
+	
+# git 代码回滚
 
-# **git revert** 和 **git reset** 的区别
+## **git revert** 和 **git reset** 的区别
  先看图：
  
 ![](https://ww3.sinaimg.cn/large/006tNbRwgy1fcr9tu6vdjj30t30ez0y8.jpg)
