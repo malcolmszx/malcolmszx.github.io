@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Git 指令整理
+title:      Git Operatins 
 subtitle:   不适合阅读的整理的一些个人常用的 Git 指令
 date:       2017-02-15
 author:     BY
